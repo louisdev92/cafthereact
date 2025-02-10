@@ -1,12 +1,21 @@
 import React from 'react';
+import '../App.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-function Header(props) {
+function Header() {
     return (
-        <div>
-            <h1>
-            Header
-            </h1>
-        </div>
+        <header className="header">
+            <div className="header-content">
+                <h1 className="brand-title">CAFTHE</h1>
+            </div>
+            <div className="header-icons">
+                {/* Icône de profil (connexion) */}
+                <FontAwesomeIcon icon={faUser} className="icon" />
+                {/* Icône de panier */}
+                <FontAwesomeIcon icon={faShoppingCart} className="icon" />
+            </div>
+        </header>
     );
 }
 

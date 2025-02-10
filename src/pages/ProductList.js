@@ -4,7 +4,8 @@ import ProductCard from "../components/ProductCard";
 /* npm install axios */
 /* npm install react-loading-skeleton */
 import "react-loading-skeleton/dist/skeleton.css"
-import Skeleton from "react-loading-skeleton";
+import Skeleton from "react-loading-skeleton"
+import '../App.js';
 
 function ProductList(props) {
         const [produits, setProduits] = React.useState([]);
@@ -49,7 +50,6 @@ function ProductList(props) {
 
     return (
         <div>
-            <h3> Liste des produits</h3>
             <div className="product-list">
                 {produits.map((produit) =>(
                     <ProductCard key={produit.produit_id} produit={produit} />

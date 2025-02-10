@@ -3,9 +3,9 @@ import React from 'react';
 function Footer(props) {
     return (
         <div>
-            <h1>
-                Footer
-            </h1>
+            <footer className="footer">
+                <p>&copy; 2025 Cafthé. Tous droits réservés.</p>
+            </footer>
         </div>
     );
 }
