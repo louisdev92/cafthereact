@@ -1,3 +1,228 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Fond de la page */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333; /* Couleur de texte générale */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #3e9c33; /* Changer la couleur des liens au survol */
+}
+
+/* En-tête */
+header {
+    background-color: #3e9c33; /* Fond vert */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase; /* Donner un style plus affirmé */
+}
+
+/* Menu de navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #24551d; /* Fond plus foncé pour le menu */
+    padding: 10px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff5e6; /* Lien au survol dans une couleur claire */
+}
+
+/* Section de présentation */
+.hero-section {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.hero-section h2 {
+    font-size: 2.8rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Bouton principal */
+.main-btn {
+    background-color: #3e9c33;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.main-btn:hover {
+    background-color: #24551d;
+}
+
+/* Formulaires */
+form {
+    background-color: white;
+    padding: 30px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    outline: none;
+    border-color: #3e9c33;
+}
+
+form button {
+    background-color: #3e9c33;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #24551d;
+}
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #3e9c33;
+}
+
+/* Contenu principal */
+.main-content {
+    padding: 40px 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.section-title span {
+    color: #3e9c33;
+}
+
+/* Messages d'erreur ou succès */
+.error-message, .success-message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.error-message {
+    background-color: #ffcccc;
+    color: #d9534f;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #28a745;
+}
+
+/* Liste d'articles */
+ul, ol {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Animation pour les cartes de produits */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
 /* Conteneur pour afficher les cartes en ligne */
 .product-cards-container {
     display: flex;
@@ -30,15 +255,17 @@
 
 /* Titre du produit */
 .product-card h3 {
-    font-size: 1.2rem;        /* Taille de police légèrement réduite */
-    color: #333;              /* Couleur du texte gris foncé */
-    font-weight: bold;        /* Gras pour faire ressortir le texte */
-    margin-bottom: 15px;      /* Espacement en bas pour aérer */
-    text-align: center;       /* Centrer le texte */
-    background-color: #fff;   /* Fond blanc pour le titre */
-    padding: 8px 0;           /* Espacement vertical autour du texte */
-    border-radius: 6px;       /* Coins arrondis pour un effet plus doux */
-    width: 100%;              /* Le titre prend toute la largeur de la carte */
+    font-size: 1.3rem;
+    color: #6e4b3a;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    background-color: #fff;
+    padding: 8px 0;
+    border-radius: 6px;
+    width: 100%;
+    font-family: 'Pacifico', cursive;
+    text-transform: capitalize;
 }
 
 
@@ -47,7 +274,7 @@
     font-size: 1rem;
     color: #888; /* Gris clair pour le prix */
     margin-bottom: 15px;
-    text-align: center; /* Centrer le prix */
+    text-align: center;
 }
 
 /* Bouton pour voir les détails */
@@ -61,7 +288,6 @@
     text-align: center;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    text-align: center;
 }
 
 .details-btn:hover {
@@ -71,9 +297,9 @@
 /* Conteneur pour afficher les cartes en ligne */
 .product-list {
     display: flex;
-    flex-wrap: wrap;          /* Permet aux cartes de passer à la ligne si nécessaire */
-    gap: 20px;                /* Espace uniforme entre les cartes */
-    justify-content: center; /* Centrer horizontalement */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -84,32 +310,32 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
-    max-width: 600px; /* Limite la largeur maximale */
-    margin: 20px auto; /* Centrer horizontalement et ajouter un espace vertical */
+    max-width: 600px;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espacement entre les éléments */
+    gap: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid #ddd; /* Bordure grise douce */
+    border: 2px solid #ddd;
 }
 
-/* Effet au survol du conteneur de détails */
 .product-details:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-    border-color: #3e9c33; /* Bordure verte lors du survol */
+    border-color: #3e9c33;
 }
 
 /* Titre du produit */
 .product-details h2 {
-    font-size: 1.5rem;
-    color: #fff; /* Texte en blanc pour contraster */
+    font-size: 1.7rem;
+    color: #fff;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
-    background-color: #3e9c33; /* Fond vert pour le titre */
+    background-color: #3e9c33;
     padding: 10px 0;
     border-radius: 6px;
+    text-transform: uppercase;
 }
 
 /* Description du produit */
@@ -123,20 +349,20 @@
 /* Prix du produit */
 .product-details p:nth-of-type(2) {
     font-size: 1.1rem;
-    color: #3e9c33; /* Prix en vert */
+    color: #3e9c33;
     font-weight: bold;
 }
 
 /* Étiquette pour "Stock" */
 .product-details p:nth-of-type(3) {
     font-size: 1rem;
-    color: #888; /* Gris clair pour le stock */
+    color: #888;
 }
 
 /* Mise en forme du texte en gras */
 .product-details p strong {
     font-weight: bold;
-    color: #333; /* Gris foncé pour les titres des informations */
+    color: #333;
 }
 
 /* Responsivité */
@@ -154,14 +380,60 @@
     .product-details p {
         font-size: 0.95rem;
     }
-}
 
-
-
-/* Responsivité */
-@media (max-width: 768px) {
     .product-card {
         width: 100%;
         margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .main-btn {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+
+    .product-details {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    form button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+
+    .main-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 }
