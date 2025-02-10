@@ -1,9 +1,15 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import ProductCard from "../components/ProductCard";
 /* npm install axios */
+/* npm install react-loading-skeleton */
+import "react-loading-skeleton/dist/skeleton.css"
+import Skeleton from "react-loading-skeleton";
+
 function ProductList(props) {
         const [produits, setProduits] = React.useState([]);
+        const [isLoading, setIsloading] = useState(true);
+
 
         useEffect(() => {
             const fetchProduits = async () => {
@@ -14,10 +20,33 @@ function ProductList(props) {
                 } catch (error) {
                     console.error("Erreur de chargement des produits", error);
                 }
+                finally {
+                    setIsloading(false); /* On arrête d'afficher le chargement (squellette) */
+                }
             };
 
             void fetchProduits();
         }, []);
+
+    if (isLoading) {
+        return (
+            <div className="product-list">
+                {Array.from({ length: 6 }).map((_, i) => (
+                    <div key={i} className="product-skeleton">
+                        {/* image */}
+                        <Skeleton height={200} width="300" />
+                        <div style={{ marginTop: "10px" }}>
+                            <Skeleton height={20} width="70%" />
+                        </div>
+                        <div style={{ marginTop: "10px" }}>
+                            <Skeleton height={20} width="40%" />
+                        </div>
+                    </div>
+                ))}
+            </div>
+        );
+    }
+
     return (
         <div>
             <h3> Liste des produits</h3>

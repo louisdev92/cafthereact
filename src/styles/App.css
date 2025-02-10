@@ -77,6 +77,87 @@
     margin-top: 20px;
 }
 
+/* Conteneur pour afficher les détails du produit */
+.product-details {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; /* Limite la largeur maximale */
+    margin: 20px auto; /* Centrer horizontalement et ajouter un espace vertical */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacement entre les éléments */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #ddd; /* Bordure grise douce */
+}
+
+/* Effet au survol du conteneur de détails */
+.product-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border-color: #3e9c33; /* Bordure verte lors du survol */
+}
+
+/* Titre du produit */
+.product-details h2 {
+    font-size: 1.5rem;
+    color: #fff; /* Texte en blanc pour contraster */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #3e9c33; /* Fond vert pour le titre */
+    padding: 10px 0;
+    border-radius: 6px;
+}
+
+/* Description du produit */
+.product-details p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Prix du produit */
+.product-details p:nth-of-type(2) {
+    font-size: 1.1rem;
+    color: #3e9c33; /* Prix en vert */
+    font-weight: bold;
+}
+
+/* Étiquette pour "Stock" */
+.product-details p:nth-of-type(3) {
+    font-size: 1rem;
+    color: #888; /* Gris clair pour le stock */
+}
+
+/* Mise en forme du texte en gras */
+.product-details p strong {
+    font-weight: bold;
+    color: #333; /* Gris foncé pour les titres des informations */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .product-details {
+        padding: 15px;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .product-details h2 {
+        font-size: 1.3rem;
+    }
+
+    .product-details p {
+        font-size: 0.95rem;
+    }
+}
+
+
+
 /* Responsivité */
 @media (max-width: 768px) {
     .product-card {
