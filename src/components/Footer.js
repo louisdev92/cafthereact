@@ -1,9 +1,13 @@
 import React from 'react';
 
-function Home(props) {
+function Footer(props) {
     return (
-        <div></div>
+        <div>
+            <h1>
+                Footer
+            </h1>
+        </div>
     );
 }
 
-export default Home;
+export default Footer;
