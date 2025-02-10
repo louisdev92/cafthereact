@@ -1,0 +1,86 @@
+/* Conteneur pour afficher les cartes en ligne */
+.product-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espace entre les cartes */
+    justify-content: space-between; /* Espacement uniforme entre les cartes */
+    align-items: center; /* Centrer les cartes si elles ne prennent pas toute la hauteur de la ligne */
+}
+
+/* Style général pour la carte du produit */
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacer les éléments uniformément */
+    align-items: center; /* Centrer les éléments horizontalement */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Titre du produit */
+.product-card h3 {
+    font-size: 1.2rem;        /* Taille de police légèrement réduite */
+    color: #333;              /* Couleur du texte gris foncé */
+    font-weight: bold;        /* Gras pour faire ressortir le texte */
+    margin-bottom: 15px;      /* Espacement en bas pour aérer */
+    text-align: center;       /* Centrer le texte */
+    background-color: #fff;   /* Fond blanc pour le titre */
+    padding: 8px 0;           /* Espacement vertical autour du texte */
+    border-radius: 6px;       /* Coins arrondis pour un effet plus doux */
+    width: 100%;              /* Le titre prend toute la largeur de la carte */
+}
+
+
+/* Prix du produit */
+.product-card p {
+    font-size: 1rem;
+    color: #888; /* Gris clair pour le prix */
+    margin-bottom: 15px;
+    text-align: center; /* Centrer le prix */
+}
+
+/* Bouton pour voir les détails */
+.details-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #3e9c33;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.details-btn:hover {
+    background-color: #24551d;
+}
+
+/* Conteneur pour afficher les cartes en ligne */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;          /* Permet aux cartes de passer à la ligne si nécessaire */
+    gap: 20px;                /* Espace uniforme entre les cartes */
+    justify-content: center; /* Centrer horizontalement */
+    margin-top: 20px;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
