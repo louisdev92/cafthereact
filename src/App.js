@@ -4,18 +4,27 @@ import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 import Produit from "./pages/Produit";
+import {AuthProvider} from "./context/AuthContext";
+import Login from "./pages/Login";
+import Connaitre from "./pages/Connaitre";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
-      <Router>
-          <Routes>
-              <Route path="/" element={<Layout />}>
-                  <Route index element={<Home />} />
-                  <Route path="produit/:id" element={<ProductDetails/>} />
-                  <Route path="src/pages/Produit.js" component={<Produit/>}/>
-              </Route>
-          </Routes>
-      </Router>
+      <AuthProvider>
+          <Router>
+              <Routes>
+                  <Route path="/" element={<Layout />}>
+                      <Route index element={<Home />} />
+                      <Route path="produit/:id" element={<ProductDetails/>} />
+                      <Route path={"login"} element={<Login />} />
+                      <Route path="/produits" element={<Produit />} />
+                      <Route path="/connaitre" element={<Connaitre />} />
+                      <Route path="contact" element={<Contact />} />
+                  </Route>
+              </Routes>
+          </Router>
+      </AuthProvider>
   );
 }
 

@@ -825,7 +825,6 @@ footer a:hover {
 .search-form {
     display: flex;
     align-items: center;
-    background-color: #fffdfd; /* Ajout de la couleur de fond */
     border-radius: 5px; /* Coins arrondis comme les autres éléments */
     padding: 5px 10px;
 }
@@ -833,11 +832,11 @@ footer a:hover {
 /* Champ de saisie de recherche */
 .search-input {
     padding: 5px 10px;
-    border: 1px solid #0b6e4f; /* Bordure avec la même couleur que le fond */
+    border: 1px solid #ffffff; /* Bordure avec la même couleur que le fond */
     border-radius: 4px;
     width: 200px; /* Vous pouvez ajuster la largeur de la zone de recherche */
     background-color: transparent; /* Transparent pour respecter l'unité du design */
-    color: #0b6e4f; /* Texte en blanc pour contraste */
+    color: #ffffff; /* Texte en blanc pour contraste */
     font-size: 16px;
 }
 
@@ -847,12 +846,357 @@ footer a:hover {
     border: none;
     cursor: pointer;
     margin-left: 5px;
-    color: #0b6e4f;
+    color: #ffffff;
     font-size: 18px;
     transition: color 0.3s;
 }
 
+.search-input::placeholder {
+    color: #ffffff;
+}
+
+
 /* Effet au survol du bouton de recherche */
 .search-button:hover {
     color: #0a5a3f; /* Couleur d'ombre plus foncée lors du survol */
+}
+
+/* Conteneur principal du formulaire de connexion */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Titre de la page */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Formulaire de connexion */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour chaque groupe de champ de saisie */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 95%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #0b6e4f;
+}
+
+/* Style pour le message d'erreur */
+.error-message {
+    color: #d9534f;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Bouton de soumission */
+.submit-btn {
+    background-color: #0b6e4f;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+/* Effet hover sur le bouton de soumission */
+.submit-btn:hover {
+    background-color: #0a5a3f;
+}
+
+/* Styles responsive pour les écrans plus petits */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 10px;
+    }
+
+    .login-form {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Conteneur principal de la page "Nous connaître" */
+.about-us-container {
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0b6e4f;
+    margin-bottom: 20px;
+}
+
+.about-us-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-us-content h2 {
+    color: #0a5a3f;
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+
+.about-us-image {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.about-us-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneur principal de la page Contact */
+.contact-container {
+    padding: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0b6e4f;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.contact-info h2 {
+    font-size: 1.8rem;
+    color: #0b6e4f;
+    margin-top: 15px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input,
+.input-group textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #0b6e4f;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: -10px;
+}
+
+.submit-btn {
+    background-color: #0b6e4f;
+    color: white;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #0a5a3f;
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+}
+
+/* Conteneur du filtre */
+.filter-container {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Label des filtres */
+.filter-label {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+/* Select des filtres */
+.filter-select {
+    font-size: 14px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Bordure plus foncée au focus sur les sélecteurs */
+.filter-select:focus {
+    border-color: #0b6e4f;
+    background-color: #f0f8f7;
+    outline: none;
+}
+
+/* Espace entre les filtres pour une meilleure lisibilité */
+.filter-container select {
+    margin-right: 15px;
+}
+
+/* Ajouter des marges pour le dernier filtre afin de ne pas laisser un espace inutile */
+.filter-container select:last-child {
+    margin-right: 0;
+}
+
+/* Ajout de padding et centrage pour les options */
+.filter-container option {
+    padding: 10px;
+}
+
+/* Style des filtres de type bouton (par exemple, pour un bouton de réinitialisation ou un bouton d'action) */
+.filter-btn {
+    background-color: #0b6e4f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Effet hover sur les boutons de filtrage */
+.filter-btn:hover {
+    background-color: #0a5a3f;
+}
+
+/* Style général pour les éléments de filtrage à côté les uns des autres */
+.filter-container select,
+.filter-container label {
+    display: inline-block;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+/* Ajouter un espacement entre les filtres */
+.filter-container select {
+    margin-right: 15px;
+}
+
+.product-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centre horizontalement */
+    justify-content: flex-start;  /* Aligne le contenu en haut */
+    padding: 20px;
+}
+
+.submit-btn {
+    background-color: #0b6e4f;
+    color: white;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;  /* Ajoute de l'espace au-dessus du bouton */
+}
+
+.submit-btn:hover {
+    background-color: #0a5a3f;
+    transform: translateY(-2px);
 }

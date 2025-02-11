@@ -29,4 +29,27 @@ export function AuthProvider({ children }) {
             localStorage.removeItem("user");
         }
     }, [token, user]);
+
+    // Connexion (On recoit les données envoyées par l'API : token + infos client)
+
+    const login = (jwt, userData) => {
+        setToken(jwt);
+        setUser(userData);
+    };
+    // Deconnexion
+
+    const logout = () => {
+        setToken(null);
+        setUser(null);
+    };
+
+    const value = {
+        token,
+        user,
+        login,
+        logout,
+        isAuthenticated: !!token,
+    }
+
+    return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

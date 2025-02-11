@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../App.js';
 
 function ProductDetails(props) {
     const { id } = useParams();
     const [produit, setProduit] = useState(null);  // Initialisation à null, pas undefined
+    const navigate = useNavigate();  // Hook pour naviguer
 
     useEffect(() => {
         const fetchProduit = async () => {
@@ -26,13 +27,19 @@ function ProductDetails(props) {
     }
 
     return (
-        <div className="product-details">
-            <h2>{produit.nom}</h2>
-            <p>{produit.description}</p>
-            <p>
-                <strong>Prix TTC :</strong> {produit.prix_TTC} €
-            </p>
-            <p><strong>Stock :</strong> {produit.stock} unités</p>
+        <div className="product-details-container">
+            <div className="product-details">
+                <h2>{produit.nom}</h2>
+                <p>{produit.description}</p>
+                <p>
+                    <strong>Prix TTC :</strong> {produit.prix_TTC} €
+                </p>
+                <p><strong>Stock :</strong> {produit.stock} unités</p>
+            </div>
+            {/* Bouton Retour en dehors de la carte */}
+            <button onClick={() => navigate(-1)} className="submit-btn">
+                Retour
+            </button>
         </div>
     );
 }

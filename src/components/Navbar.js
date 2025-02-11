@@ -23,9 +23,9 @@ function Header() {
                 {/* Navigation centrée */}
                 <nav className="nav-links">
                     <a href="/" className="nav-link">Accueil</a>
-                    <Link to="/produit">Voir nos produits</Link>
-                    <a href="/" className="nav-link">À propos de nous</a>
-                    <a href="/" className="nav-link">Contact</a>
+                    <Link to="/produits" className="nav-link" >Nos produits</Link>
+                    <Link to="/connaitre" className="nav-link" >Nous Connaitres</Link>
+                    <Link to="/contact" className="nav-link" >Nous Contactez</Link>
                 </nav>
             </div>
             <div className="header-right">
