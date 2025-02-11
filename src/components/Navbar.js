@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, {useContext, useState} from 'react';
 import '../App.js';  // Assurez-vous d'avoir un fichier de style global.
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import {Link} from "react-router-dom";
 
-function Header() {
+function Navbar() {
     const [searchQuery, setSearchQuery] = useState('');
 
     const handleSearch = (event) => {
@@ -23,9 +23,9 @@ function Header() {
                 {/* Navigation centrée */}
                 <nav className="nav-links">
                     <a href="/" className="nav-link">Accueil</a>
-                    <Link to="/produits" className="nav-link" >Nos produits</Link>
-                    <Link to="/connaitre" className="nav-link" >Nous Connaitres</Link>
-                    <Link to="/contact" className="nav-link" >Nous Contactez</Link>
+                    <Link to="/produits" className="nav-link">Nos produits</Link>
+                    <Link to="/connaitre" className="nav-link">Nous Connaitres</Link>
+                    <Link to="/contact" className="nav-link">Nous Contactez</Link>
                 </nav>
             </div>
             <div className="header-right">
@@ -39,7 +39,7 @@ function Header() {
                         className="search-input"
                     />
                     <button type="submit" className="search-button">
-                        <FontAwesomeIcon icon={faSearch} />
+                        <FontAwesomeIcon icon={faSearch}/>
                     </button>
                 </form>
             </div>
@@ -47,4 +47,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Navbar;

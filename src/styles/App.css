@@ -153,22 +153,6 @@ a {
     line-height: 1.8;
 }
 
-.main-btn {
-    background-color: #5e9c61;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    color: white;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.main-btn:hover {
-    background-color: #3e7b47;
-}
 
 /* Contact Section */
 .contact-section {
@@ -192,8 +176,7 @@ a {
 }
 
 .main-btn {
-    background-color: #6e4b3a;
-    padding: 15px 30px;
+    background-color: #3e9c33;
     font-size: 1.1rem;
     color: white;
     border-radius: 30px;
@@ -205,7 +188,7 @@ a {
 }
 
 .main-btn:hover {
-    background-color: #3e9c33;
+    background-color: #6e4b3a
 }
 
 /* Footer */
@@ -521,23 +504,6 @@ footer a:hover {
     line-height: 1.8;
 }
 
-.contact-section .main-btn {
-    background-color: #6e4b3a;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    color: white;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.contact-section .main-btn:hover {
-    background-color: #3e9c33;
-}
-
 /* Responsive Design for Testimonials and Contact Sections */
 @media (max-width: 768px) {
     .testimonials-section h2,
@@ -776,6 +742,11 @@ footer a:hover {
     display: flex;
     gap: 20px;
     align-items: center; /* Centrer verticalement les icônes */
+}
+
+.icons:hover {
+    background-color: #0a5a3f;
+    transform: translateY(-2px);
 }
 
 .icon {
@@ -1200,3 +1171,31 @@ h2 {
     background-color: #0a5a3f;
     transform: translateY(-2px);
 }
+
+/* Style de base pour les icônes */
+.icon {
+    font-size: 24px;
+    transition: color 0.3s ease; /* Transition pour l'effet de changement de couleur */
+}
+
+/* Effet de hover pour toutes les icônes */
+.icon:hover {
+    color: #007bff; /* Couleur au survol */
+}
+
+/* Si l'utilisateur est connecté, changer la couleur de l'icône de profil */
+.icon.logged-in {
+    color: #28a745; /* Vert, ou toute autre couleur pour l'icône connecté */
+}
+
+/* Effet de hover spécifique à l'icône de profil */
+.icon.logged-in:hover {
+    color: #218838; /* Couleur au survol si connecté */
+}
+
+/* Apply this to your Navbar */
+.navbar {
+    position: sticky; /* Makes the navbar sticky */
+    top: 0; /* Ensures it sticks to the top */
+}
+

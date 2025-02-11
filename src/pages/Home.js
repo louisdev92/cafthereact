@@ -106,7 +106,6 @@ function Home() {
                         loading="lazy">
                     </iframe>
                 </div>
-
                 <a href="#contact" className="main-btn">Nous contacter</a>
             </section>
 
