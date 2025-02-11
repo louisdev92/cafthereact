@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../App.js';  // Assurez-vous d'avoir un fichier de style global.
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import {Link} from "react-router-dom";
 
 function Header() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -22,7 +23,7 @@ function Header() {
                 {/* Navigation centrée */}
                 <nav className="nav-links">
                     <a href="/" className="nav-link">Accueil</a>
-                    <a href="/" className="nav-link">Nos Produits</a>
+                    <Link to="/produit">Voir nos produits</Link>
                     <a href="/" className="nav-link">À propos de nous</a>
                     <a href="/" className="nav-link">Contact</a>
                 </nav>

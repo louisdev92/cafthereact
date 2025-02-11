@@ -782,3 +782,77 @@ footer a:hover {
     font-size: 24px; /* Ajuste la taille de l'icône */
     cursor: pointer; /* Ajoute un curseur en forme de main au survol */
 }
+
+/* Style général pour l'entête */
+.header {
+    display: flex;
+    justify-content: space-between; /* Crée un espacement entre les sections */
+    align-items: center; /* Aligne les éléments verticalement */
+    padding: 10px 20px; /* Vous pouvez ajuster l'espacement comme vous le souhaitez */
+}
+
+/* Pour la partie gauche (icônes de profil, panier, etc.) */
+.header-left {
+    display: flex;
+    align-items: center; /* Aligne les éléments verticalement */
+}
+
+/* Pour la partie centrale (nav bar) */
+.header-center {
+    flex-grow: 1; /* Cette section prend tout l'espace disponible au centre */
+    text-align: center; /* Centre le texte à l'intérieur de la section */
+}
+
+/* Pour la barre de navigation */
+.nav-links {
+    display: inline-block; /* Assure que la navigation s'affiche en ligne */
+    margin: 0; /* Enlève les marges par défaut */
+    padding: 0;
+}
+
+/* Pour chaque lien de la navigation */
+.nav-link {
+    margin: 0 15px; /* Espacement entre les liens */
+}
+
+/* Pour la partie droite (zone de recherche) */
+.header-right {
+    display: flex;
+    align-items: center; /* Aligne les éléments de la zone de recherche */
+}
+
+/* Formulaire de recherche */
+.search-form {
+    display: flex;
+    align-items: center;
+    background-color: #fffdfd; /* Ajout de la couleur de fond */
+    border-radius: 5px; /* Coins arrondis comme les autres éléments */
+    padding: 5px 10px;
+}
+
+/* Champ de saisie de recherche */
+.search-input {
+    padding: 5px 10px;
+    border: 1px solid #0b6e4f; /* Bordure avec la même couleur que le fond */
+    border-radius: 4px;
+    width: 200px; /* Vous pouvez ajuster la largeur de la zone de recherche */
+    background-color: transparent; /* Transparent pour respecter l'unité du design */
+    color: #0b6e4f; /* Texte en blanc pour contraste */
+    font-size: 16px;
+}
+
+/* Bouton de recherche */
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #0b6e4f;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Effet au survol du bouton de recherche */
+.search-button:hover {
+    color: #0a5a3f; /* Couleur d'ombre plus foncée lors du survol */
+}
