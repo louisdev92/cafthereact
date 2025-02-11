@@ -7,6 +7,7 @@ function Home() {
         <div className="home-container">
 
             {/* Section Hero */}
+
             <section className="hero-section">
                 <h2>Bienvenue chez Cafthé</h2>
                 <p>

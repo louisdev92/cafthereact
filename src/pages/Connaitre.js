@@ -27,7 +27,7 @@ function AboutUs(props) {
                     offrir le meilleur à nos clients et contribuer à une entreprise durable.
                 </p>
                 <div className="about-us-image">
-                    <img src="../../public/equipe.jpeg" alt="Notre équipe" />
+                    <img src="../../public/logo192.png" alt="Notre équipe" />
                 </div>
             </div>
         </div>

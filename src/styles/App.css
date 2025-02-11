@@ -1199,3 +1199,57 @@ h2 {
     top: 0; /* Ensures it sticks to the top */
 }
 
+/* Style du bouton d'ajout au panier */
+.ajouter-panier-btn {
+    background-color: #0b6e4f; /* Vert foncé */
+    color: white; /* Texte blanc */
+    padding: 10px 20px; /* Espacement interne */
+    border-radius: 25px; /* Coins arrondis */
+    border: none;
+    display: inline-block; /* Affichage en ligne */
+    margin-top: 10px; /* Marges au-dessus */
+    transition: background-color 0.3s, transform 0.3s; /* Animation */
+}
+
+/* Effet hover sur le bouton d'ajout au panier */
+.ajouter-panier-btn:hover {
+    background-color: #0a5a3f; /* Vert plus foncé au survol */
+    transform: scale(1.05); /* Légère mise à l'échelle */
+}
+
+/* Style des boutons de quantité */
+.quantite-container {
+    margin: 10px 0; /* Espacement autour de la quantité */
+    display: flex;
+    justify-content: center; /* Centrer les boutons */
+    align-items: center; /* Centrer verticalement */
+}
+
+.quantite-container button {
+    background-color: #0b6e4f; /* Vert du bouton */
+    color: white;
+    padding: 5px 10px; /* Espacement */
+    border: none;
+    border-radius: 100px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 5px; /* Espacement entre les boutons */
+}
+
+.quantite-container button:hover {
+    background-color: #0a5a3f; /* Vert foncé au survol */
+}
+
+/* Style pour l'affichage du panier */
+.panier {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+.panier div {
+    font-size: 1rem;
+    margin: 10px 0;
+}
