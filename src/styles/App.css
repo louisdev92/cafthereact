@@ -330,6 +330,26 @@ a {
     background-color: #0a5a3f;
 }
 
+.logout-button {
+    background-color: #2a3d2f;
+    color: white;
+    border: none;
+    padding: 7px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: darkgreen;
+}
+
+.logout-button svg {
+    color: white; /* Assure que l'icône reste blanche */
+    font-size: 1.2rem;
+}
+
 /* Images de fond spécifiques à chaque catégorie */
 .category-coffee {
     background-image: url('https://www.shutterstock.com/image-photo/coffee-beans-on-table-260nw-2544597793.jpg'); /* Remplacez par l'URL de l'image café */
@@ -1088,3 +1108,70 @@ h2 {
     background-color: #0a5a3f;
 }
 
+.navbar.scrolled img {
+    width: 75px; /* Taille réduite lors du défilement */
+}
+
+.navbar img {
+    transition: width 0.3s ease;
+}
+
+.navbar .small-logo {
+    display: none;
+    position: absolute;
+    left: 20px;
+    width: 75px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navbar.show-small-logo .small-logo {
+    display: block;
+    opacity: 1;
+}.container {
+     position: relative; /* Nécessaire pour que l'enfant absolu s'y réfère */
+     width: 300px;
+     height: 200px;
+     background-color: lightblue;
+     text-align: center;
+ }
+
+
+/* Menu burger */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Menu mobile caché par défaut */
+.mobile-menu {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Cache le menu normal */
+    }
+
+    .menu-icon {
+        display: block; /* Affiche le menu burger */
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: black;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .mobile-menu .nav-link {
+        padding: 10px 15px;
+        display: block;
+    }
+}
