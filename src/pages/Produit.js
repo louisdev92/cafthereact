@@ -55,6 +55,8 @@ function Produit() {
                     <option value="50-100">De 50€ à 100€</option>
                     <option value="100+">Plus de 100€</option>
                 </select>
+
+                <button className="ajouter-panier-btn" > Appliquer </button>
             </div>
 
             <div className="product-list-container">

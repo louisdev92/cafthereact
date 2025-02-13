@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductList from './ProductList'; // Importez votre liste de produits
-import '../App.js';  // Assurez-vous d'avoir un fichier de style global.
+import '../App.js';
+import {Link} from "react-router-dom";  // Assurez-vous d'avoir un fichier de style global.
 
 function Home() {
     return (
@@ -18,7 +19,7 @@ function Home() {
                 <p>
                     Explorez notre collection exclusive de cafés, thés et accessoires pour sublimer votre quotidien.
                 </p>
-                <a href="#products" className="main-btn">Voir nos produits</a>
+                <Link to="/produits" className="main-btn">Voir nos produits</Link>
             </section>
 
             <section className="categories-section">
@@ -26,17 +27,17 @@ function Home() {
                     <div className="category-item category-coffee">
                         <h3>Café</h3>
                         <p>Découvrez notre sélection de cafés de spécialité.</p>
-                        <a href="#" className="category-btn">Voir plus</a>
+                        <Link to="/produits" className="category-btn">Voir plus</Link>
                     </div>
                     <div className="category-item category-tea">
                         <h3>Thé</h3>
                         <p>Des thés raffinés pour une expérience unique.</p>
-                        <a href="#" className="category-btn">Voir plus</a>
+                        <Link to="/produits" className="category-btn">Voir plus</Link>
                     </div>
                     <div className="category-item category-accessory">
                         <h3>Accessoires</h3>
                         <p>Tout pour améliorer votre expérience café/thé.</p>
-                        <a href="#" className="category-btn">Voir plus</a>
+                        <Link to="/produits" className="category-btn">Voir plus</Link>
                     </div>
                 </div>
             </section>
@@ -50,7 +51,7 @@ function Home() {
                     pour vous offrir une expérience unique.
                 </p>
                 <ProductList/>
-                <a href="#about" className="main-btn">Voir Plus</a>
+                <Link to="/produits" className="main-btn">Voir Plus</Link>
             </section>
 
             {/* Section À propos */}
@@ -64,7 +65,7 @@ function Home() {
                     Nous travaillons main dans la main avec des producteurs et des torréfacteurs passionnés pour vous
                     garantir une qualité et une fraîcheur incomparables.
                 </p>
-                <a href="#about" className="main-btn">Découvrez notre histoire</a>
+                <Link to="/connaitre" className="main-btn">Découvrez notre histoire</Link>
             </section>
 
             {/* Section Témoignages */}
@@ -107,7 +108,7 @@ function Home() {
                         loading="lazy">
                     </iframe>
                 </div>
-                <a href="#contact" className="main-btn">Nous contacter</a>
+                <Link to="/contact" className="main-btn">Nous contacter</Link>
             </section>
 
         </div>
