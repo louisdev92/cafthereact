@@ -110,7 +110,6 @@ function Home() {
                 </div>
                 <Link to="/contact" className="main-btn">Nous contacter</Link>
             </section>
-
         </div>
     );
 }

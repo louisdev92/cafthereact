@@ -14,7 +14,7 @@ function Navbar() {
     };
 
     return (
-        <header className="header">
+        <header className="navbar">
             <div className="header-left">
                 {/* Icônes de profil et de panier */}
                 {/* Tu peux ajouter des icônes ici si nécessaire */}

@@ -8,6 +8,7 @@ import {AuthProvider} from "./context/AuthContext";
 import Login from "./pages/Login";
 import Connaitre from "./pages/Connaitre";
 import Contact from "./pages/Contact";
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                   </Route>
               </Routes>
           </Router>
+          <ScrollToTopButton />
       </AuthProvider>
   );
 }
