@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Connaitre from "./pages/Connaitre";
 import Contact from "./pages/Contact";
 import ScrollToTopButton from './components/ScrollToTopButton';
+import LegalNotice from "./pages/LegalNotice";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                       <Route path="/produits" element={<Produit />} />
                       <Route path="/connaitre" element={<Connaitre />} />
                       <Route path="contact" element={<Contact />} />
+                      <Route path="/mentions-legales" element={<LegalNotice/>} />
                   </Route>
               </Routes>
           </Router>

@@ -8,15 +8,6 @@ const PromoPopup = () => {
         setIsVisible(false);
     };
 
-    useEffect(() => {
-        // Vous pouvez ajouter une logique pour afficher le pop-up après un certain temps ou sous certaines conditions
-        const timer = setTimeout(() => {
-            setIsVisible(true);
-        }, 2000); // Affiche le pop-up après 2 secondes
-
-        return () => clearTimeout(timer);
-    }, []);
-
     if (!isVisible) return null;
 
     return (
