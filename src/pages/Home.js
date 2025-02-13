@@ -2,10 +2,12 @@ import React from 'react';
 import ProductList from './ProductList'; // Importez votre liste de produits
 import '../App.js';
 import {Link} from "react-router-dom";  // Assurez-vous d'avoir un fichier de style global.
+import PromoPopup from '../components/PromoPopup';
 
 function Home() {
     return (
         <div className="home-container">
+            <PromoPopup />
 
             {/* Section Hero */}
 
