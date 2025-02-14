@@ -1182,3 +1182,11 @@ h2 {
     text-align: center;
 }
 
+.header-center {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement si nécessaire */
+    width: 100%;
+    height: 80px; /* Ajuste selon ton besoin */
+}
+
