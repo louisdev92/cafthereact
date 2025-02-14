@@ -1,44 +1,22 @@
-import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { AuthContext } from "../context/AuthContext";
-import { FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
-import '../styles/App.css';
+import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
 function Header() {
-    const navigate = useNavigate();
-    const { user, isAuthenticated, logout } = useContext(AuthContext);
-
-    const handleUserClick = () => {
-        navigate('/login');
-    };
-
     return (
-        <header className="header">
-            <div className="header-content">
-            </div>
-            <div className="header-icons">
-                <FontAwesomeIcon icon={faUser} className="icon" onClick={handleUserClick} />
-                <FontAwesomeIcon icon={faShoppingCart} className="icon" />
+        <header>
+            <div className="header-contenu">
                 <div>
-                    {isAuthenticated ? (
-                        <>
-                            <span>
-                                {user.prenom.charAt(0).toUpperCase() + user.prenom.slice(1).toLowerCase()}
-                                {" "}
-                                {user.nom.charAt(0).toUpperCase() + user.nom.slice(1).toLowerCase()}
-                                {" "}
-                            </span>
-                            <button className="logout-button" onClick={logout}>
-                                <FaSignOutAlt/>
-                            </button>
-                        </>
-                    ) : (
-                        <Link to={'/login'}>
-                        <FaSignInAlt/> Se connecter
-                        </Link>
-                    )}
+                    <h1>L. Hameau</h1>
+                    <h2>Développeur Web Junior</h2>
+                </div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li className="bouton"><Link smooth to="/#presentation">Accueil</Link></li>
+                            <li className="bouton"><Link smooth to="/#competences">Compétences</Link></li>
+                            <li className="bouton"><Link smooth to="/#projets">Projets Réalisés</Link></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
