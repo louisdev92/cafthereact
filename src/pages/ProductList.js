@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-import Presentation from "../components/Presentation";
+import ProductCard from "../components/ProductCard";
 /* npm install axios */
 /* npm install react-loading-skeleton */
 import "react-loading-skeleton/dist/skeleton.css"
@@ -52,7 +52,7 @@ function ProductList(props) {
         <div>
             <div className="product-list">
                 {produits.map((produit) =>(
-                    <Presentation key={produit.produit_id} produit={produit} />
+                    <ProductCard key={produit.produit_id} produit={produit} />
                     ))}
             </div>
         </div>

@@ -1,37 +1,37 @@
 import React from 'react';
-import '../styles/App.css';
+import '../styles/LegalNotice.css'; // Assurez-vous d'avoir un fichier CSS pour le style
 
-function MentionLegal() {
+const LegalNotice = () => {
     return (
-        <section id="mentions-legales">
-            <div className="legal-contenu">
-                <h2>Informations Légales</h2>
-                <p>Conformément à la loi française, voici les informations relatives à ce site web.</p>
+        <div className="legal-notice">
+            <h1>Mentions Légales</h1>
 
-                <h3>Propriétaire du site</h3>
-                <p>
-                    Nom de l'entreprise ou du propriétaire<br />
-                    Adresse complète<br />
-                    Téléphone : 0123456789<br />
-                    Email : exemple@mail.com
-                </p>
+            <h2>Éditeur du Site</h2>
+            <p>
+                Le présent site est édité par [Nom de l'entreprise ou du propriétaire], dont le siège social est situé à [Adresse complète], immatriculée au Registre du Commerce et des Sociétés de [Ville] sous le numéro [Numéro RCS].
+            </p>
 
-                <h3>Responsabilité</h3>
-                <p>Le propriétaire de ce site s'engage à fournir des informations exactes et à jour. Cependant, il ne peut être tenu responsable des erreurs ou des omissions dans les contenus diffusés sur ce site.</p>
+            <h2>Directeur de la Publication</h2>
+            <p>
+                Le directeur de la publication est [Nom du directeur de la publication].
+            </p>
 
-                <h3>Hébergement</h3>
-                <p>
-                    Le site est hébergé par :<br />
-                    Nom de l'hébergeur<br />
-                    Adresse de l'hébergeur<br />
-                    Téléphone : 0987654321
-                </p>
+            <h2>Hébergement</h2>
+            <p>
+                Le site est hébergé par [Nom de l'hébergeur], dont le siège social est situé à [Adresse de l'hébergeur], [Code postal] [Ville], [Pays].
+            </p>
 
-                <h3>Propriété Intellectuelle</h3>
-                <p>Les contenus de ce site sont protégés par les droits de propriété intellectuelle et ne peuvent être reproduits sans autorisation.</p>
-            </div>
-        </section>
+            <h2>Propriété Intellectuelle</h2>
+            <p>
+                Tous les éléments du site, y compris les textes, images, graphismes, logos, icônes, sons, logiciels, sont la propriété exclusive de [Nom de l'entreprise] ou de ses partenaires, à l'exception des marques, logos ou contenus appartenant à d'autres sociétés partenaires ou auteurs.
+            </p>
+
+            <h2>Responsabilité</h2>
+            <p>
+                [Nom de l'entreprise] ne saurait être tenue responsable des erreurs ou omissions dans les informations diffusées ou des problèmes techniques rencontrés sur le site et sur tous les autres sites vers lesquels des liens sont établis, ou de toute interprétation des informations publiées sur ces sites, ainsi que des conséquences de leur utilisation.
+            </p>
+        </div>
     );
-}
+};
 
-export default MentionLegal;
+export default LegalNotice;

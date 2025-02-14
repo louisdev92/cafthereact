@@ -1,39 +1,35 @@
-// App.js
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Presentation from './components/Presentation';
-import Competences from './components/Competences';
-import Projets from './components/Projets';
-import Footer from './components/Footer';
-import LegalNotice from "./pages/LegalNotice";
-import RGPD from './pages/RGPD';
-
 import './styles/App.css';
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./layout/Layout";
+import Home from "./pages/Home";
+import ProductDetails from "./pages/ProductDetails";
+import Produit from "./pages/Produit";
+import {AuthProvider} from "./context/AuthContext";
+import Login from "./pages/Login";
+import Connaitre from "./pages/Connaitre";
+import Contact from "./pages/Contact";
+import ScrollToTopButton from './components/ScrollToTopButton';
+import LegalNotice from "./pages/LegalNotice";
 
 function App() {
-    return (
-        <div className="App">
-            <Header />
-            <main>
-                <Routes>
-                    <Route path="/" element={
-                        <>
-                            <Presentation />
-                            <Competences />
-                            <Projets />
-                        </>
-                    } />
-                    <Route path="/mention-legal" element={<LegalNotice />} />
-                    <Route path="/rgpd" element={<RGPD />} />
-                </Routes>
-            </main>
-            <Footer />
-            <a href="#" id="scrollToTop" className="scroll-to-top">
-                <img src="./assets/img/fleche.png" alt="Scroll to top" />
-            </a>
-        </div>
-    );
+  return (
+      <AuthProvider>
+          <Router>
+              <Routes>
+                  <Route path="/" element={<Layout />}>
+                      <Route index element={<Home />} />
+                      <Route path="produit/:id" element={<ProductDetails/>} />
+                      <Route path={"login"} element={<Login />} />
+                      <Route path="/produits" element={<Produit />} />
+                      <Route path="/connaitre" element={<Connaitre />} />
+                      <Route path="contact" element={<Contact />} />
+                      <Route path="/mentions-legales" element={<LegalNotice/>} />
+                  </Route>
+              </Routes>
+          </Router>
+          <ScrollToTopButton />
+      </AuthProvider>
+  );
 }
 
 export default App;
