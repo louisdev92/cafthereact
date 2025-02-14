@@ -42,13 +42,12 @@ function Navbar() {
 
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-            {isScrolled && (
-                <img
-                    src="https://www.cafthe.fr/wp-content/uploads/2019/06/logo_white_x2.png"
-                    alt="Logo"
-                    width={75} // Petite taille du logo dans la navbar
-                />
-            )}
+            <img className="logo"
+                src="https://www.cafthe.fr/wp-content/uploads/2019/06/logo_white_x2.png"
+                alt="Logo"
+
+            />
+
             <div className="header-center">
                 <nav className="nav-links">
                     <a href="/" className="nav-link">Accueil</a>
@@ -67,13 +66,14 @@ function Navbar() {
                         className="search-input"
                     />
                     <button type="submit" className="search-button">
-                        <FontAwesomeIcon icon={faSearch} />
+                        <FontAwesomeIcon icon={faSearch}/>
                     </button>
                 </form>
                 {products.length > 0 && (
                     <div className="product-results">
                         {products.map((product) => (
-                            <Link key={product.produit_id} to={`/produit/${product.produit_id}`} className="product-item">
+                            <Link key={product.produit_id} to={`/produit/${product.produit_id}`}
+                                  className="product-item">
                                 <h2>{product.nom}</h2>
                                 <p>Description: {product.description}</p>
                                 <p>Prix HT: {product.prix_HT} €</p>

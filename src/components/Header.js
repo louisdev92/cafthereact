@@ -19,13 +19,6 @@ function Header() {
 
     return (
         <header className="header">
-            <div className="header-content">
-                <img
-                    src="https://www.cafthe.fr/wp-content/uploads/2019/06/logo_white_x2.png"
-                    alt="Logo"
-                    width={150} // Grande taille du logo dans le header
-                />
-            </div>
             <div className="header-icons">
                 <FontAwesomeIcon
                     icon={faUser}
