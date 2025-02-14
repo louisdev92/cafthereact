@@ -7,6 +7,7 @@ function Navbar() {
     const [searchQuery, setSearchQuery] = useState('');
     const [products, setProducts] = useState([]);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const handleSearch = async (event) => {
         event.preventDefault();
@@ -43,19 +44,23 @@ function Navbar() {
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <img className="logo"
-                src="https://www.cafthe.fr/wp-content/uploads/2019/06/logo_white_x2.png"
-                alt="Logo"
+                 src="https://www.cafthe.fr/wp-content/uploads/2019/06/logo_white_x2.png"
+                 alt="Logo"
 
             />
 
-            <div className="header-center">
-                <nav className="nav-links">
-                    <a href="/" className="nav-link">Accueil</a>
-                    <Link to="/produits" className="nav-link">Nos produits</Link>
-                    <Link to="/connaitre" className="nav-link">Nous Connaitres</Link>
-                    <Link to="/contact" className="nav-link">Nous Contactez</Link>
-                </nav>
-            </div>
+            <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+                ☰
+            </button>
+
+            {/* Navigation Links */}
+            <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+                <Link to="/" className="nav-link">Accueil</Link>
+                <Link to="/produits" className="nav-link">Nos produits</Link>
+                <Link to="/connaitre" className="nav-link">Nous Connaitre</Link>
+                <Link to="/contact" className="nav-link">Nous Contacter</Link>
+            </nav>
+
             <div className="header-right">
                 <form onSubmit={handleSearch} className="search-form">
                     <input
