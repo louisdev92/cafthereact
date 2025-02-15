@@ -11,7 +11,7 @@ import Connaitre from "./pages/Connaitre";
 import Contact from "./pages/Contact";
 import ScrollToTopButton from './components/ScrollToTopButton';
 import LegalNotice from "./pages/LegalNotice";
-import Inscritption from "./pages/Inscritption";
+import Inscritption from "./components/Inscritption";
 
 function App() {
   return (

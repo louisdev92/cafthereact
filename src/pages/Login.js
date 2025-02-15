@@ -3,7 +3,7 @@ import axios from 'axios'; // Import axios
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import '../styles/index.css';
-import Inscritption from "./Inscritption";
+import Inscritption from "../components/Inscritption";
 
 function Login(props) {
     const { login } = useContext(AuthContext); // Fonction login venant du contexte
