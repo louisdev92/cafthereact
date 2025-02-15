@@ -3,6 +3,7 @@ import axios from 'axios'; // Import axios
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import '../styles/index.css';
+import Inscritption from "./Inscritption";
 
 function Login(props) {
     const { login } = useContext(AuthContext); // Fonction login venant du contexte
@@ -101,7 +102,11 @@ function Login(props) {
                 {error && <p className="error-message">{error}</p>}
 
                 <button type="submit" className="submit-btn">Se connecter</button>
+
             </form>
+            <div className='login-container'>
+                <Inscritption className="login-form"></Inscritption>
+            </div>
         </div>
     );
 }
