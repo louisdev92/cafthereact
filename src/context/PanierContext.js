@@ -1,9 +1,17 @@
-import React, {createContext, useState} from "react";
+import React, {createContext, useEffect, useState} from "react";
 
 export const PanierContext = createContext();
 
 export const PanierProvider = ({ children }) => {
-    const [panier, setPanier] = useState([]);
+    const [panier, setPanier] = useState(() => {
+        // Charger le panier depuis localStorage au démarrage
+        const panierStocké = localStorage.getItem("panier");
+        return panierStocké ? JSON.parse(panierStocké) : [];
+    });
+        // Sauvegarder le panier à chaque mise à jour
+    useEffect(() => {
+        localStorage.setItem("panier", JSON.stringify(panier));
+    }, [panier]);
 
     // Ajouter un produit au panier
     const ajouterAuPanier = (produit, quantite = 1) => {
@@ -28,6 +36,7 @@ export const PanierProvider = ({ children }) => {
     // Vider le panier
     const viderPanier = () => {
         setPanier([]);
+        localStorage.removeItem("panier");
     };
 
     return (
