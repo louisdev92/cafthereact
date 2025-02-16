@@ -30,18 +30,6 @@ function ProductCard({ produit, ajouterAuPanier }) {
                 <h3>{produit.nom}</h3>
                 <p>{produit.prix_TTC} €</p>
             </Link>
-
-            {/* Contrôles de quantité */}
-            <div className="quantite-container">
-                <button onClick={diminuerQuantite}>-</button>
-                <span>{quantite}</span>
-                <button onClick={augmenterQuantite}>+</button>
-            </div>
-
-            {/* Bouton pour ajouter au panier */}
-            <button onClick={ajouterProduitAuPanier} className="ajouter-panier-btn">
-                Ajouter au panier
-            </button>
         </div>
     );
 }

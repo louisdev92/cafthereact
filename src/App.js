@@ -17,6 +17,7 @@ import Panier from "./components/Panier";
 import PanierAcces from "./pages/PanierAcces";
 import ListeProduits from "./components/ListeProduits";
 import PasserCommande from "./components/PasserCommande";
+import MonCompte from "./components/Mon Compte";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
                       <Route path="/monpanier" element={<PanierAcces/>} />
                       <Route path="/produit" element={<ListeProduits />} />
                       <Route path="/passer-commande" element={<PasserCommande />} />
+                      <Route path="/mon-compte" element={<MonCompte />} />
                   </Route>
               </Routes>
           </Router>

@@ -10,7 +10,7 @@ function Header() {
     const { user, isAuthenticated, logout } = useContext(AuthContext);
 
     const handleUserClick = () => {
-        navigate('/login');
+        navigate('/mon-compte');
     };
 
     const handleUserClickk = () => {
