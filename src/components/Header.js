@@ -13,6 +13,10 @@ function Header() {
         navigate('/login');
     };
 
+    const handleUserClickk = () => {
+        navigate('/panier');
+    };
+
     const handleLogout = () => {
         logout();
     };
@@ -25,7 +29,10 @@ function Header() {
                     className="icon"
                     onClick={handleUserClick}
                 />
-                <FontAwesomeIcon icon={faShoppingCart} className="icon" />
+                <FontAwesomeIcon
+                    icon={faShoppingCart}
+                    className="icon"
+                onClick={handleUserClickk} />
                 <div>
                     {isAuthenticated ? (
                         <>

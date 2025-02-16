@@ -12,6 +12,12 @@ import Contact from "./pages/Contact";
 import ScrollToTopButton from './components/ScrollToTopButton';
 import LegalNotice from "./pages/LegalNotice";
 import Inscritption from "./components/Inscritption";
+import FicheProduit from "./components/FicheProduit";
+import Panier from "./components/Panier";
+import PanierAcces from "./pages/PanierAcces";
+import ListeProduits from "./components/ListeProduits";
+import PasserCommande from "./components/PasserCommande";
+
 
 function App() {
   return (
@@ -28,6 +34,11 @@ function App() {
                       <Route path="contact" element={<Contact />} />
                       <Route path="/mentions-legales" element={<LegalNotice/>} />
                       <Route path="/inscriptions" element={<Inscritption />} />
+                      <Route path="/produit/:id" element={<FicheProduit/>} />
+                      <Route path="/panier" element={<Panier/>} />
+                      <Route path="/monpanier" element={<PanierAcces/>} />
+                      <Route path="/produit" element={<ListeProduits />} />
+                      <Route path="/passer-commande" element={<PasserCommande />} />
                   </Route>
               </Routes>
           </Router>

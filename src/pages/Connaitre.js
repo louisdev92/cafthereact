@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/App.css';  // Assure-toi d'ajouter des styles appropriés dans ce fichier
+import '../styles/App.css';
+import Panier from "../components/Panier";  // Assure-toi d'ajouter des styles appropriés dans ce fichier
 
 function AboutUs(props) {
     return (
