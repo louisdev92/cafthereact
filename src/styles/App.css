@@ -390,6 +390,24 @@ a {
     background-position: center;
 }
 
+.category-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Assombrir l'image de fond */
+    z-index: 0; /* Placer l'overlay derrière le contenu */
+}
+
+.category-item h3,
+.category-item p,
+.category-item .category-btn {
+    position: relative; /* Pour que le contenu reste au-dessus de l'overlay */
+    z-index: 1; /* Permet au contenu d'être au-dessus de l'overlay assombrissant */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .categories-container {
