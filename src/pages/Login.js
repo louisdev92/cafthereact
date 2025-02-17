@@ -69,7 +69,7 @@ function Login(props) {
 
     return (
         <div className="login-container">
-            <h2>Connexion</h2>
+            <h2>Se connecter</h2>
 
             <form onSubmit={handleSubmit} className="login-form">
                 {/* Champ e-mail */}
