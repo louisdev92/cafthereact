@@ -162,6 +162,7 @@ a {
 
 .about-section h2 {
     font-size: 2.8rem;
+    font-family: 'Pacifico', cursive;
     color: #ffffff;
     margin-bottom: 20px;
     font-weight: bold;
@@ -186,9 +187,14 @@ a {
 
 .contact-section h2 {
     font-size: 2.8rem;
+    font-family: 'Pacifico', cursive;
     color: #333;
     margin-bottom: 20px;
     font-weight: bold;
+}
+
+.contact-section h3 {
+    font-family: 'Pacifico', cursive;
 }
 
 .contact-section p {
@@ -214,6 +220,7 @@ a {
 
 .testimonials-section h2 {
     font-size: 2.8rem;
+    font-family: 'Pacifico', cursive;
     color: #333;
     margin-bottom: 20px;
     font-weight: bold;
@@ -440,7 +447,7 @@ a {
     }
 
     .product-section .section-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .about-section h2,
@@ -786,6 +793,7 @@ footer a:hover {
 
 h2 {
     font-size: 2rem;
+    font-family: 'Pacifico', cursive;
     margin-bottom: 20px;
     color: #333;
 }
@@ -861,6 +869,7 @@ h2 {
 .about-us-title {
     text-align: center;
     font-size: 2.5rem;
+    font-family: 'Pacifico', cursive;
     color: #0b6e4f;
     margin-bottom: 20px;
 }
@@ -879,6 +888,7 @@ h2 {
 
 .about-us-content h2 {
     color: #0a5a3f;
+    font-family: 'Pacifico', cursive;
     font-size: 1.8rem;
     margin-top: 20px;
 }
@@ -906,6 +916,7 @@ h2 {
 
 .contact-title {
     text-align: center;
+    font-family: 'Pacifico', cursive;
     font-size: 2.5rem;
     color: #0b6e4f;
     margin-bottom: 30px;
@@ -919,6 +930,7 @@ h2 {
 
 .contact-info h2 {
     font-size: 1.8rem;
+    font-family: 'Pacifico', cursive;
     color: #0b6e4f;
     margin-top: 15px;
 }
@@ -1493,7 +1505,7 @@ h2 {
 
 /* Titre de la commande */
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     color: #333;
 }

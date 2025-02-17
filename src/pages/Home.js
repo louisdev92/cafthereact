@@ -198,7 +198,7 @@ function Home() {
                 <p style={{ fontSize: '16px', color: '#555', maxWidth: '600px', margin: '0 auto 30px' }}>
                     Que vous ayez des demandes spécifiques ou des questions sur nos produits, n'hésitez pas à nous contacter.
                 </p>
-                <h3 style={{ fontSize: '22px', marginBottom: '15px', color: '#333' }}>Nos Coordonnées</h3>
+                <h3 style={{ fontSize: '22px', marginBottom: '15px', color: '#333',}}>Nos Coordonnées</h3>
                 <ul style={{ listStyle: 'none', padding: 0, fontSize: '16px', color: '#444', lineHeight: '1.8' }}>
                     <li><strong>📍 Adresse :</strong> 123 Rue des Tasses, 41000 Blois, France</li>
                     <li><strong>🕒 Horaires :</strong> Lundi - Vendredi : 9h00 - 18h00</li>
