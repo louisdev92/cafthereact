@@ -50,11 +50,11 @@ function Produit() {
                     value={priceRange}
                     onChange={handlePriceChange}
                 >
-                    <option value="">Toutes les gammes</option>
-                    <option value="0-20">Moins de 20€</option>
-                    <option value="20-50">De 20€ à 50€</option>
-                    <option value="50-100">De 50€ à 100€</option>
-                    <option value="100+">Plus de 100€</option>
+                    <option value="">Toutes les prix</option>
+                    <option value="0-20">Moins de 5€</option>
+                    <option value="20-50">De 5€ à 10€</option>
+                    <option value="50-100">De 10€ à 20€</option>
+                    <option value="100+">Plus de 20€</option>
                 </select>
 
                 <button className="ajouter-panier-btn" > Appliquer </button>

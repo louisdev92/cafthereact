@@ -25,25 +25,25 @@ function Header() {
         <header className="header">
             <div className="header-icons">
                 <FontAwesomeIcon
+                    icon={faShoppingCart}
+                    className="icon"
+                    onClick={handleUserClickk} />
+                <FontAwesomeIcon
                     icon={faUser}
                     className="icon"
                     onClick={handleUserClick}
                 />
-                <FontAwesomeIcon
-                    icon={faShoppingCart}
-                    className="icon"
-                onClick={handleUserClickk} />
                 <div>
                     {isAuthenticated ? (
                         <>
-                            <span>{user.prenom.toUpperCase()} {user.nom.toUpperCase()}</span>
+                            <span>{user.prenom.charAt(0).toUpperCase() + user.prenom.slice(1).toLowerCase()} {user.nom.charAt(0).toUpperCase() + user.nom.slice(1).toLowerCase()}  </span>
                             <button onClick={handleLogout}>
-                                <FaSignOutAlt />
+                                <FaSignOutAlt/>
                             </button>
                         </>
                     ) : (
                         <Link to={'/login'}>
-                            <FaSignInAlt /> Se connecter
+                            <FaSignInAlt/> Se connecter
                         </Link>
                     )}
                 </div>
