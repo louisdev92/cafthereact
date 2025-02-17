@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ProductList from "./ProductList";
 import '../styles/App.css';
-import FicheProduit from "../components/FicheProduit";
 
 function Produit() {
     // États pour les différents filtres

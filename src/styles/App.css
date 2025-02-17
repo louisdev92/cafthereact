@@ -108,6 +108,7 @@ a {
 .product-section {
     padding: 80px 20px;
     background-color: #fff;
+    border-radius: 8px;
     text-align: center;
 }
 
@@ -1392,4 +1393,41 @@ h2 {
 
 .panier-container .panier-buttons button:hover {
     background-color: #2d7a27;
+}
+
+/* Container pour le formulaire de commande */
+.commande-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Titre de la commande */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Bouton de confirmation de commande */
+.submit-btn {
+    background-color: #0b6e4f;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+/* Effet au survol du bouton */
+.submit-btn:hover {
+    background-color: #0a5a3f;
 }
