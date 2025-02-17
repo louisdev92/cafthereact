@@ -81,6 +81,7 @@ function Home() {
                     "Un service client au top, et les thés sont d'une qualité supérieure. Je suis cliente fidèle !" -
                     Marc L.
                 </p>
+                <img src="https://i.pinimg.com/564x/cf/79/c3/cf79c3680008de82541b7e7613f5ebc6.jpg" alt="Image" style={{ width: '200px', height: 'auto' }} />
             </section>
 
             {/* Section Contact */}

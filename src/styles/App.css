@@ -1362,6 +1362,21 @@ h2 {
     margin-top: 20px;
 }
 
+/* Bouton "Vider le Panier" */
+.panier-container .panier-buttons .vider {
+    background-color: red;
+    color: white; /* Pour que le texte soit lisible */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Facultatif, pour arrondir les coins */
+}
+
+.panier-container .panier-buttons .vider:hover {
+    background-color: darkred; /* Effet au survol */
+}
+
+/* Autres boutons */
 .panier-container .panier-buttons button {
     background-color: #3e9c33;
     padding: 10px 20px;
@@ -1378,4 +1393,3 @@ h2 {
 .panier-container .panier-buttons button:hover {
     background-color: #2d7a27;
 }
-
