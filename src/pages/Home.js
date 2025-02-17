@@ -1,16 +1,15 @@
 import React from 'react';
 import TopVente from './TopVente'; // Importez votre liste de produits
 import '../App.js';
-import {Link} from "react-router-dom";  // Assurez-vous d'avoir un fichier de style global.
+import { Link } from "react-router-dom";  // Assurez-vous d'avoir un fichier de style global.
 import PromoPopup from '../components/PromoPopup';
 
 function Home() {
     return (
         <div className="home-container">
-            <PromoPopup/>
+            <PromoPopup />
 
             {/* Section Hero */}
-
             <section className="hero-section">
                 <h2>Bienvenue chez Cafthé</h2>
                 <p>
@@ -25,9 +24,8 @@ function Home() {
             </section>
 
             <section className="categories-section">
-                <div className="categories-container" >
-
-                    <div className="category-item category-coffee" >
+                <div className="categories-container">
+                    <div className="category-item category-coffee">
                         <h3>Café</h3>
                         <p>Découvrez notre sélection de cafés de spécialité.</p>
                         <Link to="/produits" className="category-btn">Voir plus</Link>
@@ -45,7 +43,6 @@ function Home() {
                 </div>
             </section>
 
-
             {/* Section Produits */}
             <section id="products" className="product-section">
                 <h2 className="section-title">Meilleures Ventes</h2>
@@ -53,7 +50,7 @@ function Home() {
                     Découvrez nos produits les plus populaires, soigneusement sélectionnés pour leur qualité et leur
                     succès auprès de nos clients.
                 </p>
-                <TopVente/>
+                <TopVente />
                 <div className="button-container">
                     <Link to="/produits" className="main-btn">Voir Plus</Link>
                 </div>
@@ -66,40 +63,32 @@ function Home() {
                 style={{
                     textAlign: 'center',
                     padding: '80px 20px',
-                    backgroundImage: 'url("https://thumbs.dreamstime.com/b/coffee-background-space-text-85121087.jpg")', /* Change ce chemin selon ton cas */
+                    backgroundImage: 'url("https://thumbs.dreamstime.com/b/coffee-background-space-text-85121087.jpg")',
                     backgroundPosition: 'center',
                     position: 'relative',
                     color: '#F4EDE4'
                 }}
             >
-                {/* Overlay sombre pour améliorer la lisibilité */}
                 <div style={{
                     position: 'absolute',
                     top: 0,
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(0, 0, 0, 0.3)', /* Assombrit le fond */
+                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
                     zIndex: 1
                 }}></div>
-
-                {/* Contenu (placé au-dessus de l'overlay) */}
                 <div style={{ position: 'relative', zIndex: 2 }}>
                     <h2 style={{ fontSize: '36px', marginBottom: '20px' }}>Notre Histoire</h2>
-
                     <p className="cafe" style={{ fontSize: '20px', margin: '0 auto 10px' }}>
                         Chez Cafthé, nous sélectionnons les meilleurs producteurs pour vous offrir des produits exceptionnels.
                     </p>
-
                     <p className="cafe" style={{ fontSize: '20px', margin: '0 auto 10px' }}>
                         Notre engagement : une qualité irréprochable et un respect des valeurs artisanales.
                     </p>
-
                     <p className="cafe" style={{ fontSize: '20px', margin: '0 auto 30px' }}>
                         Nous travaillons main dans la main avec des producteurs et des torréfacteurs passionnés pour vous garantir une qualité et une fraîcheur incomparables.
                     </p>
-
-                    {/* Bouton Découvrez notre histoire */}
                     <div className="button-container">
                         <Link to="/connaitre" className="main-btn-cafe" style={{
                             backgroundColor: '#8B5E3C',
@@ -119,13 +108,10 @@ function Home() {
                 </div>
             </section>
 
-
             <section id="testimonials" className="testimonials-section"
                      style={{textAlign: 'center', padding: '50px 20px', backgroundColor: '#f8f8f8'}}>
                 <h2 style={{fontSize: '28px', marginBottom: '20px', color: '#333'}}>Ce que nos clients disent</h2>
-
                 <div style={{display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap'}}>
-                    {/* Témoignage 1 */}
                     <div style={{
                         maxWidth: '300px',
                         padding: '20px',
@@ -151,8 +137,6 @@ function Home() {
                         </p>
                         <strong style={{color: '#333'}}>- Sophie D.</strong>
                     </div>
-
-                    {/* Témoignage 2 */}
                     <div style={{
                         maxWidth: '300px',
                         padding: '20px',
@@ -178,8 +162,6 @@ function Home() {
                         </p>
                         <strong style={{color: '#333'}}>- Marc L.</strong>
                     </div>
-
-                    {/* Témoignage 3 avec l'image fournie */}
                     <div style={{
                         maxWidth: '300px',
                         padding: '20px',
@@ -203,13 +185,11 @@ function Home() {
                             "Une expérience incroyable ! Les arômes du café sont sublimes et la commande est arrivée
                             très rapidement."
                         </p>
-                        <strong style={{color: '#333'}}>- Emma R.</strong>
+                        <strong style={{color: '#333'}}>- Zoe R.</strong>
                     </div>
                 </div>
             </section>
 
-
-            {/* Section Contact */}
             <section id="contact" className="contact-section" style={{ textAlign: 'center', padding: '50px 20px', backgroundColor: '#f8f8f8' }}>
                 <h2 style={{ fontSize: '28px', marginBottom: '15px', color: '#333' }}>Contactez-nous</h2>
                 <p style={{ fontSize: '16px', color: '#555', maxWidth: '600px', margin: '0 auto 10px' }}>
@@ -218,7 +198,6 @@ function Home() {
                 <p style={{ fontSize: '16px', color: '#555', maxWidth: '600px', margin: '0 auto 30px' }}>
                     Que vous ayez des demandes spécifiques ou des questions sur nos produits, n'hésitez pas à nous contacter.
                 </p>
-
                 <h3 style={{ fontSize: '22px', marginBottom: '15px', color: '#333' }}>Nos Coordonnées</h3>
                 <ul style={{ listStyle: 'none', padding: 0, fontSize: '16px', color: '#444', lineHeight: '1.8' }}>
                     <li><strong>📍 Adresse :</strong> 123 Rue des Tasses, 41000 Blois, France</li>
@@ -229,8 +208,6 @@ function Home() {
                         </a>
                     </li>
                 </ul>
-
-                {/* Carte Google Maps */}
                 <div className="google-map" style={{ marginTop: '20px', borderRadius: '10px', overflow: 'hidden' }}>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.2721892114455!2d1.3321366758845532!3d47.58600948939995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4a81baa47a01b%3A0x283456d5dbb777bb!2sLa%20Caf&#39;Th%C3%A9!5e1!3m2!1sfr!2sfr!4v1739200110707!5m2!1sfr!2sfr"
@@ -241,15 +218,12 @@ function Home() {
                         loading="lazy">
                     </iframe>
                 </div>
-
-                {/* Bouton de contact */}
                 <div className="button-container" style={{ marginTop: '30px' }}>
                     <Link to="/contact" className="main-btn">
                         Nous contacter
                     </Link>
                 </div>
             </section>
-
         </div>
     );
 }

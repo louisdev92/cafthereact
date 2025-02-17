@@ -1,7 +1,7 @@
 /* Global styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f1e1;
     margin: 0;
     padding: 0;
     color: #333;
@@ -85,7 +85,6 @@ a {
 
 /* Home Section */
 .home-section {
-    background-color: #fff;
     padding: 80px 20px;
     margin-top: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -127,13 +126,13 @@ a {
 /* Product Section */
 .product-section {
     padding: 80px 20px;
-    background-color: #fff;
-    border-radius: 8px;
+    background-color: #f4f4f4;
     text-align: center;
 }
 
 .product-section .section-title {
     font-size: 3rem;
+    font-family: 'Pacifico', cursive;
     color: #333;
     margin-bottom: 40px;
     font-weight: bold;
@@ -500,23 +499,51 @@ footer a:hover {
 
 .product-card {
     animation: fadeIn 0.5s ease-out;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    background-color: #A8D5BA; /* Vert thé doux */
+    border-radius: 12px;
     width: 250px;
+    height: 300px; /* Ajusté pour inclure plus de contenu */
     margin: 10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-decoration: none; /* Supprime la décoration du lien */
 }
 
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    background-color: #4dd381;
+}
+
+/* Fil suspendu pour simuler le fil du sachet de thé */
+.product-card::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 80px;
+    background-color: #F4F1E1; /* Couleur du fil */
+    top: 10px; /* Positionné en haut du sachet */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+/* Découpe en bas pour imiter la forme du sachet */
+.product-card .bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #A8D5BA;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 10% 0%, 0% 50%);
+    z-index: -1;
 }
 
 .product-card h3 {
@@ -525,19 +552,32 @@ footer a:hover {
     font-weight: bold;
     margin-bottom: 15px;
     text-align: center;
-    background-color: #fff;
+    background-color: rgb(255, 253, 253);
     padding: 8px 0;
     border-radius: 6px;
     width: 100%;
     font-family: 'Pacifico', cursive;
     text-transform: capitalize;
+    position: relative;
+    z-index: 1;
 }
 
 .product-card p {
-    font-size: 1rem;
-    color: #888;
+    font-size: 1.5rem;
+    color: #9a2525;
     margin-bottom: 15px;
     text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Ajout d'un espace flexible pour centrer les éléments */
+.product-card > .product-card-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1; /* Laisse de l'espace flexible pour centrer */
+    width: 100%;
 }
 
 .details-btn {

@@ -4,21 +4,21 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7); /* Légèrement plus discret */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.6s ease-in-out;
 }
 
 .promo-popup {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    width: 80%;
-    max-width: 400px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f4f1e1; /* Teinte crème douce */
+    border-radius: 15px;
+    padding: 25px;
+    width: 85%;
+    max-width: 450px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1); /* Ombre douce */
     text-align: center;
     position: relative;
     display: flex;
@@ -30,59 +30,94 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .promo-image {
     width: 100%;
-    max-width: 200px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+    max-width: 220px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    background-size: cover; /* Image d'une tasse ou d'un thé en arrière-plan */
 }
 
 .promo-title {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-    color: #333;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #6f4f28; /* Couleur café pour le titre */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Merriweather', serif; /* Police un peu plus douce */
 }
 
 .promo-description {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #8e735b; /* Couleur chaleureuse */
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif; /* Plus neutre pour la description */
 }
 
 .promo-btn {
-    background-color: #2ecc71;
+    background-color: #8e735b; /* Couleur inspirée du café */
     color: white;
     border: none;
-    padding: 12px 25px;
-    font-size: 1rem;
-    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .promo-btn:hover {
-    background-color: #27ae60;
+    background-color: #6f4f28; /* Délégation de la couleur du café au survol */
+    transform: scale(1.05);
 }
 
 .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     background: none;
     border: none;
-    font-size: 2rem;
-    color: #333;
+    font-size: 2.5rem;
+    color: #6f4f28;
     cursor: pointer;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries pour les petits écrans */
+@media (max-width: 768px) {
+    .categories-container,
+    .testimonials-section div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-item,
+    .testimonials-section div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-section h2,
+    .section-title {
+        font-size: 24px;
+    }
+
+    .hero-section p,
+    .testimonials-section p {
+        font-size: 16px;
     }
 }
