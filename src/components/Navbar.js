@@ -43,11 +43,10 @@ function Navbar() {
 
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-            <img className="logo"
-                 src="https://www.cafthe.fr/wp-content/uploads/2019/06/logo_white_x2.png"
-                 alt="Logo"
-
-            />
+            <a href="/" className="logo">
+                <img src="https://www.cafthe.fr/wp-content/uploads/2019/06/logo_white_x2.png"
+                     alt="Logo"/>
+            </a>
 
             <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
                 ☰

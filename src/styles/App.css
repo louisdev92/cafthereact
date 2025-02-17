@@ -58,6 +58,26 @@ a {
     transition: background-color 0.3s;
 }
 
+.main-btn-cafe {
+    background-color: rgba(143, 74, 74, 0.9);
+    padding: 12px 25px;
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main-btn-cafe:hover {
+    background-color: #3e7b47;
+}
+
+.button-container {
+    position: relative;
+    margin-top: 60px; /* Ajustez l'espace au besoin */
+}
 
 .main-btn:hover {
     background-color: #3e7b47;
@@ -359,13 +379,13 @@ a {
 }
 
 .category-tea {
-    background-image: url('https://thedasie.com/wp-content/uploads/2023/07/The-Asie-Maison-de-the-Haut-de-Gamme-Alsace-France-feuille-the.jpg');
+    background-image: url('https://previews.123rf.com/images/xartdesign/xartdesign2502/xartdesign250200370/241217754-two-cups-of-tea-and-green-teapot-with-white-flowers-on-a-gray-background.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .category-accessory {
-    background-image: url('https://theiere-en-fonte.com/cdn/shop/products/tasse-a-the-porcelaine_jpg_1200x1200.jpg?v=1597082287');
+    background-image: url('https://previews.123rf.com/images/loonara/loonara1507/loonara150700008/42215117-vintage-d%C3%A9cor-de-cuisine-%C3%A9mail-rouge-pot-de-caf%C3%A9-et-des-tasses-%C3%A0-pois-sur-une-vieille-planche-de.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -788,6 +808,12 @@ h2 {
 }
 
 .about-us-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-us-cafe-content {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #555;
@@ -1221,6 +1247,7 @@ h2 {
     left: 50%;
     transform: translateX(-50%);
 }
+
 
 .fiche-produit-home-btn {
     background-color: #3e9c33;

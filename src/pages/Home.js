@@ -7,7 +7,7 @@ import PromoPopup from '../components/PromoPopup';
 function Home() {
     return (
         <div className="home-container">
-            <PromoPopup />
+            <PromoPopup/>
 
             {/* Section Hero */}
 
@@ -47,27 +47,32 @@ function Home() {
 
             {/* Section Produits */}
             <section id="products" className="product-section">
-                <h2 className="section-title">Nos Produits</h2>
+                <h2 className="section-title">Meilleures Ventes</h2>
                 <p>
-                    Des cafés de spécialité, des thés raffinés et des accessoires haut de gamme, sélectionnés avec soin
-                    pour vous offrir une expérience unique.
+                    Découvrez nos produits les plus populaires, soigneusement sélectionnés pour leur qualité et leur
+                    succès auprès de nos clients.
                 </p>
                 <TopVente/>
-                <Link to="/produits" className="main-btn">Voir Plus</Link>
+                <div className="button-container">
+                    <Link to="/produits" className="main-btn">Voir Plus</Link>
+                </div>
             </section>
 
             {/* Section À propos */}
             <section id="about" className="about-section">
                 <h2>Notre Histoire</h2>
-                <p>
+                <p className="cafe">
                     Chez Cafthé, nous sélectionnons les meilleurs producteurs pour vous offrir des produits
-                    exceptionnels. Notre engagement : une qualité irréprochable et un respect des valeurs artisanales.
-                </p>
-                <p>
+                    exceptionnels. </p>
+
+                <p className="cafe">Notre engagement : une qualité irréprochable et un respect des valeurs artisanales.</p>
+                <p className="cafe">
                     Nous travaillons main dans la main avec des producteurs et des torréfacteurs passionnés pour vous
                     garantir une qualité et une fraîcheur incomparables.
                 </p>
-                <Link to="/connaitre" className="main-btn">Découvrez notre histoire</Link>
+                <div className="button-container">
+                    <Link to="/connaitre" className="main-btn-cafe">Découvrez notre histoire</Link>
+                </div>
             </section>
 
             {/* Section Témoignages */}
@@ -81,20 +86,19 @@ function Home() {
                     "Un service client au top, et les thés sont d'une qualité supérieure. Je suis cliente fidèle !" -
                     Marc L.
                 </p>
-                <img src="https://i.pinimg.com/564x/cf/79/c3/cf79c3680008de82541b7e7613f5ebc6.jpg" alt="Image" style={{ width: '200px', height: 'auto' }} />
+                <img src="https://i.pinimg.com/564x/cf/79/c3/cf79c3680008de82541b7e7613f5ebc6.jpg" alt="Image"
+                     style={{width: '200px', height: 'auto'}}/>
             </section>
 
             {/* Section Contact */}
             <section id="contact" className="contact-section">
                 <h2>Contactez-nous</h2>
-                <p>
-                    Besoin d'aide ? Nous sommes là pour répondre à toutes vos questions. Que vous ayez des demandes
-                    spécifiques ou des questions sur nos produits, n'hésitez pas à nous contacter.
-                </p>
+                <p> Besoin d'aide ? Nous sommes là pour répondre à toutes vos questions. </p>
+                <p> Que vous ayez des demandes spécifiques ou des questions sur nos produits, n'hésitez pas à nous contacter.</p>
 
                 <h3>Nos Coordonnées</h3>
                 <ul>
-                    <li><strong>Adresse :</strong> 123 Rue des Tasses, 75000 Paris, France</li>
+                    <li><strong>Adresse :</strong> 123 Rue des Tasses, 41000 Blois, France</li>
                     <li><strong>Horaires :</strong> Lundi - Vendredi : 9h00 - 18h00</li>
                     <li><strong>Plan :</strong>
                         <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Voir sur Google
@@ -111,10 +115,12 @@ function Home() {
                         loading="lazy">
                     </iframe>
                 </div>
-                <Link to="/contact" className="main-btn">Nous contacter</Link>
+                <div className="button-container">
+                    <Link to="/contact" className="main-btn">Nous contacter</Link>
+                </div>
             </section>
         </div>
-    );
+);
 }
 
 export default Home;
