@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductList from './ProductList'; // Importez votre liste de produits
+import TopVente from './TopVente'; // Importez votre liste de produits
 import '../App.js';
 import {Link} from "react-router-dom";  // Assurez-vous d'avoir un fichier de style global.
 import PromoPopup from '../components/PromoPopup';
@@ -52,7 +52,7 @@ function Home() {
                     Des cafés de spécialité, des thés raffinés et des accessoires haut de gamme, sélectionnés avec soin
                     pour vous offrir une expérience unique.
                 </p>
-                <ProductList/>
+                <TopVente/>
                 <Link to="/produits" className="main-btn">Voir Plus</Link>
             </section>
 
