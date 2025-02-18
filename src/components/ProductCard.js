@@ -24,12 +24,17 @@ function ProductCard({ produit, ajouterAuPanier }) {
 
     return (
         <div className="product-card">
-            {/* Lien cliquable pour rediriger vers la page de détails du produit */}
-            <Link to={`/produit/${produit.produit_id}`} className="product-card-link">
-                {/* Affichage de l'image (si elle existe) */}
-                <h3>{produit.nom}</h3>
-                <p>{produit.prix_TTC} €</p>
-            </Link>
+            <div className="product-image-wrapper">
+                <img
+                    src={produit.image_path}
+                    alt={produit.nom}
+                    className="product-image"
+                />
+            </div>
+            <h3>{produit.nom}</h3>
+            <p>{produit.prix_TTC} €</p>
+            <div className="bottom"></div>
+            {/* Cette div donne la forme du paquet */}
         </div>
     );
 }

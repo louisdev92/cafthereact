@@ -504,27 +504,25 @@ footer a:hover {
     }
 }
 
+/* Carte du produit avec forme de paquet de thé */
 .product-card {
     animation: fadeIn 0.5s ease-out;
     background-color: #A8D5BA; /* Vert thé doux */
     border-radius: 12px;
     width: 250px;
-    height: 300px; /* Ajusté pour inclure plus de contenu */
     margin: 10px;
-    padding: 20px;
+    padding: 85px 20px; /* Padding plus bas pour compacter le contenu vers le bas */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    text-decoration: none; /* Supprime la décoration du lien */
+    text-decoration: none;
 }
 
+/* Effet au survol de la carte */
 .product-card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     background-color: #4dd381;
 }
@@ -542,7 +540,7 @@ footer a:hover {
     border-radius: 3px;
 }
 
-/* Découpe en bas pour imiter la forme du sachet */
+/* Découpe en bas pour imiter la forme du sachet de thé */
 .product-card .bottom {
     position: absolute;
     bottom: 0;
@@ -553,11 +551,27 @@ footer a:hover {
     z-index: -1;
 }
 
+/* Conteneur pour l'image, centré horizontalement */
+.product-image-wrapper {
+    display: flex;
+    justify-content: center; /* Centrer l'image horizontalement */
+    margin-top: 20px; /* Réduire l'espace au-dessus de l'image */
+    width: 100%;
+}
+
+/* Image du produit */
+.product-image {
+    width: 150px; /* Taille de l'image */
+    height: auto;
+    object-fit: cover;
+}
+
+/* Titre du produit */
 .product-card h3 {
     font-size: 1.3rem;
     color: #6e4b3a;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin: 10px 0; /* Moins de marge autour du titre */
     text-align: center;
     background-color: rgb(255, 253, 253);
     padding: 8px 0;
@@ -569,22 +583,14 @@ footer a:hover {
     z-index: 1;
 }
 
+/* Prix du produit */
 .product-card p {
     font-size: 1.5rem;
     color: #9a2525;
-    margin-bottom: 15px;
+    margin: 5px 0 10px; /* Moins de marge autour du prix */
     text-align: center;
     position: relative;
     z-index: 1;
-}
-
-/* Ajout d'un espace flexible pour centrer les éléments */
-.product-card > .product-card-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-grow: 1; /* Laisse de l'espace flexible pour centrer */
-    width: 100%;
 }
 
 .details-btn {
@@ -1552,4 +1558,109 @@ h2 {
 
 .social-links .fa:hover {
     transform: scale(1.2); /* Agrandir l'icône au survol */
+}
+
+/* Container principal */
+.compte-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Titre */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Section des informations utilisateur */
+.info-container {
+    background-color: white;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.info-container p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.info-container strong {
+    color: #333;
+}
+
+/* Formulaire d'édition */
+.edit-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.edit-container input:focus {
+    border-color: #0b6e4f;
+}
+
+/* Boutons */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.compte-btn {
+    background-color: #0b6e4f;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 48%;
+}
+
+.compte-btn:hover {
+    background-color: #0a5a3f;
+}
+.fiche-produit-home-btn {
+    margin-right: 10px;
+}
+/* Bouton de déconnexion */
+.logout-btn {
+    background-color: #d9534f;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.logout-btn:hover {
+    background-color: #c9302c;
 }

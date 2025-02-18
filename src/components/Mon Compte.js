@@ -1,36 +1,39 @@
-import React, {useEffect, useState} from "react";
-import {api} from "../api";
+import React, { useEffect, useState } from "react";
+import { api } from "../api";
+import '../styles/App.css'; // Importation du CSS
+import { useNavigate } from "react-router-dom";
 
 const MonCompte = () => {
     const [client, setClient] = useState(null);
     const [formData, setFormData] = useState({});
+    const navigate = useNavigate();
     const [isEditing, setIsEditing] = useState(false);
 
     useEffect(() => {
         const token = localStorage.getItem("token");
-        if (token) {
+        if (!token) {
             alert("Veuillez vous connecter!");
-            window.location.href="/login";
-        }else {
-            api.get("/client/5")
-            .then(response => {
-                setClient(response.data);
-                setFormData(response.data);
-            })
+            window.location.href = "/login";
+        } else {
+            api.get("/ficheclient/6")
+                .then(response => {
+                    setClient(response.data);
+                    setFormData(response.data);
+                })
                 .catch(() => alert("Erreur de chargement du profil."));
         }
     }, []);
 
     const handleChange = (e) => {
-        setFormData({...formData, [e.target.name]: e.target.value});
-    }
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
 
     const handleUpdate = () => {
         api.put(`/clients/${client.client_id}`, formData)
             .then(() => {
-                alert("Information mises à jour !");
+                alert("Informations mises à jour !");
                 setIsEditing(false);
-                setClient(formData)
+                setClient(formData);
             })
             .catch(() => alert("Erreur lors de la mise à jour."));
     };
@@ -41,31 +44,42 @@ const MonCompte = () => {
         window.location.href = "/login";
     };
 
-    if (!client) return <p>Chargement ...</p>
+    if (!client) return <p>Chargement ...</p>;
 
     return (
-        <div>
-            <h2> Mon compte </h2>
+        <div className="compte-container">
+            <h2>Mon compte</h2>
             {isEditing ? (
-            <div>
-                <input type="text" name="nom" value={formData.nom} onChange={handleChange} />
-                <input type="text" name="prenom" value={formData.prenom} onChange={handleChange} />
-                <input type="text" name="adresse_livraison" value={formData.adresse_livraison} onChange={handleChange} />
-                <button onClick={handleUpdate}>Enregister</button>
-                <button onClick={() => setIsEditing(false)}>Annuler</button>
-            </div>
-         ) : (
-         <div>
-             <p><strong>Nom :</strong>{client.nom}</p>
-             <p><strong>Prenom :</strong>{client.prenom}</p>
-             <p><strong>Email :</strong>{client.email}</p>
-             <p><strong>Adresse :</strong>{client.adresse_livraison || "Nom Renseignée"}</p>
-             <button onClick={() => setIsEditing(true)}>Modifier</button>
-         </div>
-    )}
-            <button onClick={handleLogout}>Se déconnecter</button>
+                <div className="edit-container">
+                    <p>Nom :</p>
+                    <input type="text" name="nom" value={formData.nom} onChange={handleChange}/>
+                    <p>Prenom :</p>
+                    <input type="text" name="prenom" value={formData.prenom} onChange={handleChange}/>
+                    <p>Adresse :</p>
+                    <input type="text" name="adresse_livraison" value={formData.adresse_livraison}
+                           onChange={handleChange}/>
+                    <div className="button-group">
+                        <button onClick={handleUpdate} className="compte-btn">Enregistrer</button>
+                        <button onClick={() => setIsEditing(false)} className="compte-btn">Annuler</button>
+                    </div>
+                </div>
+            ) : (
+                <div className="info-container">
+                    <p><strong>Nom :</strong> {client.nom}</p>
+                    <p><strong>Prénom :</strong> {client.prenom}</p>
+                    <p><strong>Email :</strong> {client.email}</p>
+                    <p><strong>Adresse :</strong> {client.adresse_livraison || "Non renseignée"}</p>
+                    <div className="button-group">
+                        <button onClick={() => setIsEditing(true)} className="compte-btn">Modifier</button>
+                        <button className="compte-btn" onClick={() => navigate(-1)}>
+                            Retour
+                        </button>
+                    </div>
+                </div>
+                    )}
+                    <button onClick={handleLogout} className="compte-btn logout-btn">Se déconnecter</button>
         </div>
-    );
-};
+            );
+            };
 
-export default MonCompte;
+            export default MonCompte;
