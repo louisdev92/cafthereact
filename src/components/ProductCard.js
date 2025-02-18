@@ -23,6 +23,7 @@ function ProductCard({ produit, ajouterAuPanier }) {
     };
 
     return (
+        <Link to={`/produit/${produit.produit_id}`} className="product-card-link">
         <div className="product-card">
             <div className="product-image-wrapper">
                 <img
@@ -36,6 +37,7 @@ function ProductCard({ produit, ajouterAuPanier }) {
             <div className="bottom"></div>
             {/* Cette div donne la forme du paquet */}
         </div>
+        </Link>
     );
 }
 
