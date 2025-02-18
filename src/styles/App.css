@@ -1650,3 +1650,43 @@ h2 {
 .fiche-produit-home-btn {
     margin-right: 10px;
 }
+
+/*----a faire---*/
+
+.product-results-container {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.product-results {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-item {
+    padding: 10px;
+    background-color: #f4f1e1;
+    text-decoration: none;
+    color: #333;
+}
+
+.product-item h2 {
+    margin: 0;
+    font-size: 1em;
+}
+
+.product-item:hover {
+    background-color: #ececec;
+}
+
+.product-results-container {
+    display: block;
+}
+
+.product-results-container.hidden {
+    display: none;
+}
+
+.search-form {
+    overflow-clip-margin: content-box;
+}
