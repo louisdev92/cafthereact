@@ -46,7 +46,7 @@ a {
     color: #5e9c61;
 }
 
-.main-btn {
+.main-btn, .main-btn-cafe {
     background-color: #5e9c61;
     padding: 12px 25px;
     color: white;
@@ -60,27 +60,19 @@ a {
 
 .main-btn-cafe {
     background-color: rgba(143, 74, 74, 0.9);
-    padding: 12px 25px;
-    color: white;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .main-btn-cafe:hover {
     background-color: #3e7b47;
 }
 
-.button-container {
-    position: relative;
-    margin-top: 60px; /* Ajustez l'espace au besoin */
-}
-
 .main-btn:hover {
     background-color: #3e7b47;
+}
+
+.button-container {
+    position: relative;
+    margin-top: 60px;
 }
 
 /* Home Section */
@@ -373,13 +365,13 @@ a {
 }
 
 .logout-button svg {
-    color: white; /* Assure que l'icône reste blanche */
+    color: white;
     font-size: 1.2rem;
 }
 
-/* Images de fond spécifiques à chaque catégorie */
+/* Specific background images for each category */
 .category-coffee {
-    background-image: url('https://www.shutterstock.com/image-photo/coffee-beans-on-table-260nw-2544597793.jpg'); /* Remplacez par l'URL de l'image café */
+    background-image: url('https://www.shutterstock.com/image-photo/coffee-beans-on-table-260nw-2544597793.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -403,15 +395,15 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Assombrir l'image de fond */
-    z-index: 0; /* Placer l'overlay derrière le contenu */
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
 }
 
 .category-item h3,
 .category-item p,
 .category-item .category-btn {
-    position: relative; /* Pour que le contenu reste au-dessus de l'overlay */
-    z-index: 1; /* Permet au contenu d'être au-dessus de l'overlay assombrissant */
+    position: relative;
+    z-index: 1;
 }
 
 /* Responsive Design */
@@ -504,17 +496,17 @@ footer a:hover {
     }
 }
 
-/* Carte du produit avec forme de paquet de thé */
+/* Product Card */
 .product-card {
     animation: fadeIn 0.5s ease-out;
-    background-color: #8e6344; /* Vert thé doux */
-    background-image: url(/public/img/fondvert.jpeg); /* Remplace 'path_to_image.jpg' par ton chemin d'image */
-    background-size: cover; /* Pour couvrir toute la surface de la carte */
-    background-position: center; /* Pour centrer l'image */
+    background-color: #8e6344;
+    background-image: url(/public/img/fondvert.jpeg);
+    background-size: cover;
+    background-position: center;
     border-radius: 12px;
     width: 250px;
     margin: 10px;
-    padding: 85px 20px; /* Padding plus bas pour compacter le contenu vers le bas */
+    padding: 85px 20px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -524,27 +516,23 @@ footer a:hover {
     text-decoration: none;
 }
 
-
-/* Effet au survol de la carte */
 .product-card:hover {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     background-color: #4dd381;
 }
 
-/* Fil suspendu pour simuler le fil du sachet de thé */
 .product-card::after {
     content: "";
     position: absolute;
     width: 3px;
     height: 80px;
-    background-color: #F4F1E1; /* Couleur du fil */
-    top: 10px; /* Positionné en haut du sachet */
+    background-color: #F4F1E1;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 3px;
 }
 
-/* Découpe en bas pour imiter la forme du sachet de thé */
 .product-card .bottom {
     position: absolute;
     bottom: 0;
@@ -555,28 +543,25 @@ footer a:hover {
     z-index: -1;
 }
 
-/* Conteneur pour l'image, centré horizontalement */
 .product-image-wrapper {
     display: flex;
-    justify-content: center; /* Centrer l'image horizontalement */
-    margin-top: 20px; /* Réduire l'espace au-dessus de l'image */
+    justify-content: center;
+    margin-top: 20px;
     width: 100%;
 }
 
-/* Image du produit */
 .product-image {
-    width: 150px; /* Taille de l'image */
+    width: 150px;
     height: auto;
     object-fit: cover;
     border-radius: 25px;
 }
 
-/* Titre du produit */
 .product-card h3 {
     font-size: 1.3rem;
     color: #9a2525;
     font-weight: bold;
-    margin: 10px 0; /* Moins de marge autour du titre */
+    margin: 10px 0;
     text-align: center;
     background-color: rgb(255, 253, 253);
     padding: 8px 0;
@@ -588,11 +573,10 @@ footer a:hover {
     z-index: 1;
 }
 
-/* Prix du produit */
 .product-card p {
     font-size: 1.5rem;
     color: #ffffff;
-    margin: 5px 0 10px; /* Moins de marge autour du prix */
+    margin: 5px 0 10px;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -1217,7 +1201,7 @@ h2 {
 }
 
 .navbar.scrolled img {
-    width: 75px; /* Taille réduite lors du défilement */
+    width: 75px;
 }
 
 .navbar img {
@@ -1235,14 +1219,15 @@ h2 {
 .navbar.show-small-logo .small-logo {
     display: block;
     opacity: 1;
-}.container {
-     position: relative; /* Nécessaire pour que l'enfant absolu s'y réfère */
-     width: 300px;
-     height: 200px;
-     background-color: lightblue;
-     text-align: center;
- }
+}
 
+.container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: lightblue;
+    text-align: center;
+}
 
 /* Menu burger */
 .menu-icon {
@@ -1256,14 +1241,13 @@ h2 {
     display: none;
 }
 
-
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Cache le menu normal */
+        display: none;
     }
 
     .menu-icon {
-        display: block; /* Affiche le menu burger */
+        display: block;
     }
 
     .mobile-menu {
@@ -1283,6 +1267,7 @@ h2 {
         display: block;
     }
 }
+
 /* Menu burger */
 .menu-toggle {
     display: none;
@@ -1291,7 +1276,6 @@ h2 {
     border: none;
     cursor: pointer;
 }
-
 
 @media (max-width: 768px) {
     .menu-toggle {
@@ -1322,13 +1306,11 @@ h2 {
     }
 }
 
-
 .logo {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
-
 
 .fiche-produit-home-btn {
     background-color: #3e9c33;
@@ -1474,15 +1456,15 @@ h2 {
 /* Bouton "Vider le Panier" */
 .panier-container .panier-buttons .vider {
     background-color: red;
-    color: white; /* Pour que le texte soit lisible */
+    color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px; /* Facultatif, pour arrondir les coins */
+    border-radius: 5px;
 }
 
 .panier-container .panier-buttons .vider:hover {
-    background-color: darkred; /* Effet au survol */
+    background-color: darkred;
 }
 
 /* Autres boutons */
@@ -1540,13 +1522,11 @@ h2 {
     background-color: #0a5a3f;
 }
 
-
-
 .social-links {
     display: flex;
-    justify-content: left; /* Aligne les éléments à gauche horizontalement */
-    align-items: center; /* Centre les éléments verticalement */
-    height: 100%; /* Assurez-vous que le conteneur a une hauteur définie pour que l'alignement vertical fonctionne */
+    justify-content: left;
+    align-items: center;
+    height: 100%;
 }
 
 .social-links .nav-link {
@@ -1554,7 +1534,7 @@ h2 {
 }
 
 .social-links .nav-link:hover {
-    color: #6e4b3a; /* Changer la couleur au survol */
+    color: #6e4b3a;
 }
 
 .social-links .fa {
@@ -1562,7 +1542,7 @@ h2 {
 }
 
 .social-links .fa:hover {
-    transform: scale(1.2); /* Agrandir l'icône au survol */
+    transform: scale(1.2);
 }
 
 /* Container principal */
@@ -1655,10 +1635,7 @@ h2 {
 .compte-btn:hover {
     background-color: #0a5a3f;
 }
-.fiche-produit-home-btn {
-    margin-right: 10px;
-}
-/* Bouton de déconnexion */
+
 .logout-btn {
     background-color: #d9534f;
     margin-top: 20px;
@@ -1668,4 +1645,8 @@ h2 {
 
 .logout-btn:hover {
     background-color: #c9302c;
+}
+
+.fiche-produit-home-btn {
+    margin-right: 10px;
 }
