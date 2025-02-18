@@ -1,0 +1,67 @@
+/* App.css */
+
+#rgpd {
+    background-color: #f4f4f4; /* Couleur de fond légère pour la section RGPD */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+}
+
+
+.rgpd-contenu h2 {
+    color: #0b6e4f; /* Couleur du titre principal */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.rgpd-contenu h3 {
+    color: #0b6e4f; /* Couleur des sous-titres */
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.rgpd-contenu p {
+    color: #555; /* Couleur du texte */
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.rgpd-contenu a {
+    color: #3498db; /* Couleur des liens */
+    text-decoration: none;
+}
+
+.rgpd-contenu a:hover {
+    text-decoration: underline;
+}
+
+/* Ajout d'un peu d'espacement pour les petites sections */
+.rgpd-contenu section {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    /* Responsivité pour les écrans plus petits */
+    #rgpd {
+        padding: 15px;
+    }
+
+    .rgpd-contenu {
+        padding: 15px;
+    }
+
+    .rgpd-contenu h2 {
+        font-size: 24px;
+    }
+
+    .rgpd-contenu h3 {
+        font-size: 20px;
+    }
+
+    .rgpd-contenu p {
+        font-size: 14px;
+    }
+}

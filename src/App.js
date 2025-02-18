@@ -18,6 +18,8 @@ import PanierAcces from "./pages/PanierAcces";
 import ListeProduits from "./components/ListeProduits";
 import PasserCommande from "./components/PasserCommande";
 import MonCompte from "./components/Mon Compte";
+import RGPD from "./pages/RGPD";
+import ConditionsVentes from "./pages/ConditionsVentes";
 
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
                       <Route path="/connaitre" element={<Connaitre />} />
                       <Route path="contact" element={<Contact />} />
                       <Route path="/mentions-legales" element={<LegalNotice/>} />
+                      <Route path={"/rgpd"} element={<RGPD/>} />
+                      <Route path={"/Conditions-Ventes"} element={<ConditionsVentes/>} />
                       <Route path="/inscriptions" element={<Inscritption />} />
                       <Route path="/produit/:id" element={<FicheProduit/>} />
                       <Route path="/panier" element={<Panier/>} />

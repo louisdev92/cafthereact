@@ -8,8 +8,8 @@ function Footer(props) {
         <div>
             <footer className="footer">
                 <Link to="/mentions-legales" className="nav-link">Mentions Légales</Link>
-                <a href="/" className="nav-link">Politique de Confidentialité</a>
-                <a href="/" className="nav-link">Conditions de Vente</a>
+                <a href="/rgpd" className="nav-link">Politique de Confidentialité</a>
+                <a href="/Conditions-Ventes" className="nav-link">Conditions de Vente</a>
                 <div className="social-links">
                     <a href="https://www.instagram.com" className="nav-link" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faInstagram} size="2x"/>

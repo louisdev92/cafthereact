@@ -133,7 +133,7 @@ a {
 .product-section .section-title {
     font-size: 3rem;
     font-family: 'Pacifico', cursive;
-    color: #333;
+    color: #0b6e4f;
     margin-bottom: 40px;
     font-weight: bold;
     text-transform: uppercase;
@@ -507,7 +507,10 @@ footer a:hover {
 /* Carte du produit avec forme de paquet de thé */
 .product-card {
     animation: fadeIn 0.5s ease-out;
-    background-color: #A8D5BA; /* Vert thé doux */
+    background-color: #8e6344; /* Vert thé doux */
+    background-image: url(/public/img/fondvert.jpeg); /* Remplace 'path_to_image.jpg' par ton chemin d'image */
+    background-size: cover; /* Pour couvrir toute la surface de la carte */
+    background-position: center; /* Pour centrer l'image */
     border-radius: 12px;
     width: 250px;
     margin: 10px;
@@ -520,6 +523,7 @@ footer a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     text-decoration: none;
 }
+
 
 /* Effet au survol de la carte */
 .product-card:hover {
@@ -564,12 +568,13 @@ footer a:hover {
     width: 150px; /* Taille de l'image */
     height: auto;
     object-fit: cover;
+    border-radius: 25px;
 }
 
 /* Titre du produit */
 .product-card h3 {
     font-size: 1.3rem;
-    color: #6e4b3a;
+    color: #9a2525;
     font-weight: bold;
     margin: 10px 0; /* Moins de marge autour du titre */
     text-align: center;
@@ -586,7 +591,7 @@ footer a:hover {
 /* Prix du produit */
 .product-card p {
     font-size: 1.5rem;
-    color: #9a2525;
+    color: #ffffff;
     margin: 5px 0 10px; /* Moins de marge autour du prix */
     text-align: center;
     position: relative;
@@ -1015,7 +1020,7 @@ h2 {
 .filter-container {
     margin: 20px 0;
     padding: 10px;
-    background-color: #f7f7f7;
+    background-color: #f4f1e1;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -1573,9 +1578,9 @@ h2 {
 
 /* Titre */
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #0b6e4f;
 }
 
 /* Section des informations utilisateur */

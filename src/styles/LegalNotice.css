@@ -1,11 +1,12 @@
 .legal-notice {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 20px;
+    margin: 20px auto;
     background-color: #f4f4f4;
     color: #333;
     padding: 20px;
     border-radius: 8px;
+    max-width: 1200px;
 }
 
 .legal-notice h1, .legal-notice h2 {

@@ -8,7 +8,7 @@ const LegalNotice = () => {
 
             <h2>Éditeur du Site</h2>
             <p>
-                Le présent site est édité par [Nom de l'entreprise ou du propriétaire], dont le siège social est situé à [Adresse complète], immatriculée au Registre du Commerce et des Sociétés de [Ville] sous le numéro [Numéro RCS].
+                Le présent site est édité par CafThé, dont le siège social est situé à Blois, immatriculée au Registre du Commerce et des Sociétés de Blois sous le numéro [Numéro RCS].
             </p>
 
             <h2>Directeur de la Publication</h2>
@@ -23,12 +23,15 @@ const LegalNotice = () => {
 
             <h2>Propriété Intellectuelle</h2>
             <p>
-                Tous les éléments du site, y compris les textes, images, graphismes, logos, icônes, sons, logiciels, sont la propriété exclusive de [Nom de l'entreprise] ou de ses partenaires, à l'exception des marques, logos ou contenus appartenant à d'autres sociétés partenaires ou auteurs.
+                Tous les éléments du site, y compris les textes, images, graphismes, logos, icônes, sons, logiciels, sont la propriété exclusive de CafThé ou de ses partenaires, à l'exception des marques, logos ou contenus appartenant à d'autres sociétés partenaires ou auteurs.
+            </p>
+            <p>
+                Les images présentes sur le site sont des images libres de droits provenant de Pexels, Shutterstock, Dreamstime, et 123Ref. Le logo de CafThé a été généré avec ChatGPT.
             </p>
 
             <h2>Responsabilité</h2>
             <p>
-                [Nom de l'entreprise] ne saurait être tenue responsable des erreurs ou omissions dans les informations diffusées ou des problèmes techniques rencontrés sur le site et sur tous les autres sites vers lesquels des liens sont établis, ou de toute interprétation des informations publiées sur ces sites, ainsi que des conséquences de leur utilisation.
+                CafThé ne saurait être tenue responsable des erreurs ou omissions dans les informations diffusées ou des problèmes techniques rencontrés sur le site et sur tous les autres sites vers lesquels des liens sont établis, ou de toute interprétation des informations publiées sur ces sites, ainsi que des conséquences de leur utilisation.
             </p>
         </div>
     );

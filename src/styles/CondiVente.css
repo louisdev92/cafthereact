@@ -1,0 +1,58 @@
+#conditions-ventes {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+}
+
+.conditions-contenu h2 {
+    color: #0b6e4f;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.conditions-contenu h3 {
+    color: #0b6e4f;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.conditions-contenu p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.conditions-contenu a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.conditions-contenu a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #conditions-ventes {
+        padding: 15px;
+    }
+
+    .conditions-contenu {
+        padding: 15px;
+    }
+
+    .conditions-contenu h2 {
+        font-size: 24px;
+    }
+
+    .conditions-contenu h3 {
+        font-size: 20px;
+    }
+
+    .conditions-contenu p {
+        font-size: 14px;
+    }
+}
