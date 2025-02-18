@@ -20,7 +20,7 @@ function TopVente(props) {
             } catch (error) {
                 console.error("Erreur de chargement des produits", error);
             } finally {
-                setIsloading(false); /* On arrête d'afficher le chargement (squellette) */
+                setIsloading(false); /* On arrête d'afficher le chargement (squelette). */
             }
         };
 

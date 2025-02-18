@@ -19,7 +19,7 @@ export function AuthProvider({ children }) {
         }
     }, []);
 
-    // Si le token ou l'user changent, on met a jour le LocalStorage
+    // Si le token où l'user changent, on met a jour le LocalStorage
     useEffect(() => {
         if (token && user) {
             localStorage.setItem("token", token);
@@ -30,7 +30,7 @@ export function AuthProvider({ children }) {
         }
     }, [token, user]);
 
-    // Connexion (On recoit les données envoyées par l'API : token + infos client)
+    // Connexion (On reçoit les données envoyées par l'API : token + infos client)
 
     const login = (jwt, userData) => {
         setToken(jwt);

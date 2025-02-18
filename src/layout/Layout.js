@@ -11,7 +11,7 @@ function Layout(props) {
         <>
             <Header/>
             <Navbar/>
-            {/* là ou s'affiche les pages enfants */}
+            {/* là où s'affichent les pages enfants */}
             <Outlet/>
             <Footer/>
         </>

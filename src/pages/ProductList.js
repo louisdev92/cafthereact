@@ -22,7 +22,7 @@ function ProductList(props) {
                     console.error("Erreur de chargement des produits", error);
                 }
                 finally {
-                    setIsloading(false); /* On arrête d'afficher le chargement (squellette) */
+                    setIsloading(false); /* On arrête d'afficher le chargement (squelette). */
                 }
             };
 
