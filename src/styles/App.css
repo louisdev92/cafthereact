@@ -1663,13 +1663,6 @@ h2 {
     flex-direction: column;
 }
 
-.product-item {
-    padding: 10px;
-    background-color: #f4f1e1;
-    text-decoration: none;
-    color: #333;
-}
-
 .product-item h2 {
     margin: 0;
     font-size: 1em;
@@ -1677,16 +1670,67 @@ h2 {
 
 .product-item:hover {
     background-color: #ececec;
+    text-decoration-color: black;
 }
 
+/* Container for Product Results */
 .product-results-container {
     display: block;
+    position: relative; /* Assure que le conteneur est positionné relativement */
 }
 
+/* Hidden State for Product Results Container */
 .product-results-container.hidden {
     display: none;
 }
 
-.search-form {
-    overflow-clip-margin: content-box;
+/* Styles for the Product Results Dropdown */
+.product-results {
+    position: absolute;
+    top: 100%; /* Positionné sous l'élément parent */
+    right: 1%; /* Centre horizontalement */
+    width: 250px;
+    text-align: center;
+    background: rgb(36, 85, 29);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    max-height: 300px;
+    overflow-y: auto; /* Permet le défilement vertical */
+    z-index: 1000; /* Assure que le contenu est au-dessus des autres éléments */
+    padding: 5px 0;
+}
+
+.product-results p {
+    color: white;
+    text-align: center;
+}
+
+/* Individual Product Item in the Results */
+.product-item {
+    display: block;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee; /* Ligne de séparation entre les éléments */
+    text-decoration: none;
+    color: #ffffff;
+    transition: background 0.3s ease-in-out; /* Effet de transition pour le survol */
+}
+
+/* Hover State for Product Item */
+.product-item:hover {
+    background: #f0f0f0; /* Changement de couleur de fond au survol */
+    color: black;
+}
+
+/* No Results Message */
+.no-results {
+    padding: 12px 15px;
+    color: #555;
+    text-align: center;
+}
+
+.navbarlogo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
