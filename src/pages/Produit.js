@@ -1,20 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProductList from "./ProductList";
 import '../styles/App.css';
 
 function Produit() {
-    // États pour les différents filtres
-    const [filter, setFilter] = useState('');
-    const [priceRange, setPriceRange] = useState('');  // Plage de prix
+    // États pour les filtres et les produits
+    const [category, setCategory] = useState('');
+    const [priceRange, setPriceRange] = useState('');
+    const [products, setProducts] = useState([]);
 
-    // Fonction pour gérer les changements de filtres
-    const handleFilterChange = (e) => {
-        setFilter(e.target.value);
-    };
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                let url = `https://api/produits/search`;
+                const params = new URLSearchParams();
 
-    const handlePriceChange = (e) => {
-        setPriceRange(e.target.value);
-    };
+                if (category) params.append("categorie_nom", category);
+                if (priceRange) {
+                    const [min, max] = priceRange.split('-');
+                    params.append("minPriceTTC", min);
+                    if (max) params.append("maxPriceTTC", max);
+                }
+
+                if (params.toString()) {
+                    url += `?${params.toString()}`;
+                }
+
+                console.log("Requête envoyée à l'API:", url);
+
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error("Erreur lors de la récupération des produits");
+                }
+                const data = await response.json();
+                setProducts(data);
+            } catch (error) {
+                console.error("Erreur lors de la récupération des produits :", error);
+            }
+        };
+
+        const timeoutId = setTimeout(fetchProducts, 500);
+        return () => clearTimeout(timeoutId);
+    }, [category, priceRange]);
 
     return (
         <section id="products" className="product-section">
@@ -32,13 +58,13 @@ function Produit() {
                 <select
                     id="productFilter"
                     className="filter-select"
-                    value={filter}
-                    onChange={handleFilterChange}
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
                 >
                     <option value="">Toutes les catégories</option>
-                    <option value="cafe">Café</option>
-                    <option value="the">Thé</option>
-                    <option value="accessoire">Accessoire</option>
+                    <option value="Café">Café</option>
+                    <option value="Thé">Thé</option>
+                    <option value="Accessoire">Accessoire</option>
                 </select>
 
                 {/* Filtrer par prix */}
@@ -47,24 +73,19 @@ function Produit() {
                     id="priceFilter"
                     className="filter-select"
                     value={priceRange}
-                    onChange={handlePriceChange}
+                    onChange={(e) => setPriceRange(e.target.value)}
                 >
-                    <option value="">Toutes les prix</option>
-                    <option value="0-20">Moins de 5€</option>
-                    <option value="20-50">De 5€ à 10€</option>
-                    <option value="50-100">De 10€ à 20€</option>
-                    <option value="100+">Plus de 20€</option>
+                    <option value="">Tous les prix</option>
+                    <option value="0-5">Moins de 5€</option>
+                    <option value="5-10">De 5€ à 10€</option>
+                    <option value="10-20">De 10€ à 20€</option>
+                    <option value="20-100">Plus de 20€</option>
                 </select>
-
-                <button className="ajouter-panier-btn" > Appliquer </button>
             </div>
 
             <div className="product-list-container">
-                {/* Passer les filtres à ProductList */}
-                <ProductList
-                    filter={filter}
-                    priceRange={priceRange}
-                />
+                {/* Passer les produits récupérés à ProductList */}
+                <ProductList products={products} />
             </div>
         </section>
     );
