@@ -170,6 +170,7 @@ a {
 /* Contact Section */
 .contact-section {
     background-color: #f4f4f4;
+    background-image: url('../../public/img/themotif.jpg');
     padding: 80px 20px;
     text-align: center;
     margin-top: 40px;
@@ -179,6 +180,7 @@ a {
 
 .contact-section h2 {
     font-size: 2.8rem;
+;
     font-family: 'Pacifico', cursive;
     color: #333;
     margin-bottom: 20px;
@@ -1733,4 +1735,49 @@ h2 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+
+
+.product-image {
+    object-fit: cover;
+    cursor: zoom-in; /* Ajout du curseur pour montrer qu'on peut cliquer pour zoomer */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    max-width: 50%; /* Limite la taille de l'image */
+}
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
 }

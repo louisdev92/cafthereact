@@ -9,6 +9,7 @@ const FicheProduit = () => {
     const { ajouterAuPanier } = useContext(PanierContext);
     const [produit, setProduit] = useState(null);
     const [quantite, setQuantite] = useState(1);
+    const [isModalOpen, setIsModalOpen] = useState(false); // Etat pour gérer l'ouverture de la pop-up
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -24,9 +25,25 @@ const FicheProduit = () => {
         alert(`${quantite}x ${produit.nom} ajouté au panier !`);
     };
 
+    const handleOpenModal = () => {
+        setIsModalOpen(true); // Ouvre la pop-up en cliquant sur l'image
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false); // Ferme la pop-up
+    };
+
     return (
         <div className="fiche-produit-container">
             <h2>{produit.nom}</h2>
+            <div className="product-image-wrapper">
+                <img
+                    src={produit.image_path}
+                    alt={produit.nom}
+                    className="product-image"
+                    onClick={handleOpenModal} // Ouvre la pop-up au clic sur l'image
+                />
+            </div>
             <p>{produit.description}</p>
             <p>Prix : {produit.prix_TTC}€</p>
 
@@ -46,6 +63,16 @@ const FicheProduit = () => {
                     Retour
                 </button>
             </div>
+
+            {/* Modale pour l'image agrandie */}
+            {isModalOpen && (
+                <div className="modal-overlay" onClick={handleCloseModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <img src={produit.image_path} alt={produit.nom} className="modal-image" />
+                        <button className="modal-close-btn" onClick={handleCloseModal}>Fermer</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
