@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { AuthContext } from "../context/AuthContext";
 import { FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
+import '../styles/Header.css';
 
 function Header() {
     const navigate = useNavigate();

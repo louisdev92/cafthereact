@@ -1,0 +1,120 @@
+/* Header */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #2a3d2f;
+    padding: 20px;
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.brand-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #5e9c61;
+}
+
+.main-btn, .main-btn-cafe {
+    background-color: #5e9c61;
+    padding: 12px 25px;
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main-btn-cafe {
+    background-color: rgba(143, 74, 74, 0.9);
+}
+
+.main-btn-cafe:hover {
+    background-color: #3e7b47;
+}
+
+.main-btn:hover {
+    background-color: #3e7b47;
+}
+
+.button-container {
+    position: relative;
+    margin-top: 60px;
+}
+
+/* Header Icons */
+.header-content {
+    flex: 1;
+    text-align: center;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icons:hover {
+    background-color: #0a5a3f;
+    transform: translateY(-2px);
+}
+
+.icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Search Form */
+.search-form {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.search-input {
+    padding: 5px 10px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    width: 200px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #ffffff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.search-input::placeholder {
+    color: #ffffff;
+}
+
+.search-button:hover {
+    color: #0a5a3f;
+}

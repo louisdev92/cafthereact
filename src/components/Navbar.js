@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import '../styles/Header.css';
 
 function Navbar() {
     const [searchQuery, setSearchQuery] = useState('');
