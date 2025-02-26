@@ -11,6 +11,7 @@ function Footer(props) {
                 <Link to="/mentions-legales" className="nav-link">Mentions Légales</Link>
                 <a href="/rgpd" className="nav-link">Politique de Confidentialité</a>
                 <a href="/Conditions-Ventes" className="nav-link">Conditions de Vente</a>
+                <a href="/plan" className="nav-link">Plan du site</a>
                 <div className="social-links">
                     <a href="https://www.instagram.com" className="nav-link" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faInstagram} size="2x"/>

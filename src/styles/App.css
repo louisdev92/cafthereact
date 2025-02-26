@@ -1750,3 +1750,41 @@ h2 {
             display: none;
         }
     }
+
+/* Plan Page */
+.plan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    color: #24551d;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.plan-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.plan-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.plan-link {
+    color: #24551d;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.plan-link:hover {
+    color: #bd2424;
+    transform: scale(1.05);
+}

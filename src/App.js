@@ -20,6 +20,7 @@ import PasserCommande from "./components/PasserCommande";
 import MonCompte from "./components/Mon Compte";
 import RGPD from "./pages/RGPD";
 import ConditionsVentes from "./pages/ConditionsVentes";
+import Plan from "./pages/plan";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
                       <Route path="/produit" element={<ListeProduits />} />
                       <Route path="/passer-commande" element={<PasserCommande />} />
                       <Route path="/mon-compte" element={<MonCompte />} />
+                      <Route path="/plan" element={<Plan />} />
                   </Route>
               </Routes>
           </Router>
