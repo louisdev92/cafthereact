@@ -1368,29 +1368,6 @@ h2 {
     background-color: #0a5a3f;
 }
 
-.social-links {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    height: 100%;
-}
-
-.social-links .nav-link {
-    color: #ffffff;
-}
-
-.social-links .nav-link:hover {
-    color: #6e4b3a;
-}
-
-.social-links .fa {
-    transition: transform 0.3s;
-}
-
-.social-links .fa:hover {
-    transform: scale(1.2);
-}
-
 /* Container principal */
 .compte-container {
     display: flex;

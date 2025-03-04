@@ -20,7 +20,28 @@ footer a {
 footer a:hover {
     color: #fff5e6;
 }
+.social-links {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+}
 
+.social-links .nav-link {
+    color: #ffffff;
+}
+
+.social-links .nav-link:hover {
+    color: #ff0000;
+}
+
+.social-links .fa {
+    transition: transform 0.3s;
+}
+
+.social-links .fa:hover {
+    transform: scale(1.2);
+}
 /* Product Card Animation */
 @keyframes fadeIn {
     from {
