@@ -7,18 +7,29 @@ function Produit() {
     const [category, setCategory] = useState('');
     const [priceRange, setPriceRange] = useState('');
     const [products, setProducts] = useState([]);
+    const [error, setError] = useState(null);
+
+    // Association des noms de catégories avec leurs IDs
+    const categoryMap = {
+        "Café": 2,
+        "Thé": 1,
+        "Accessoire": 3
+    };
 
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                let url = `https://api/produits/search`;
+                let url = `https://api.louis.hameau.dev-campus.fr/api/produits/search`;
                 const params = new URLSearchParams();
 
-                if (category) params.append("categorie_nom", category);
+                // Filtrer par catégorie (ID)
+                if (category) params.append("categorie_id", categoryMap[category]);
+
+                // Filtrer par plage de prix
                 if (priceRange) {
                     const [min, max] = priceRange.split('-');
-                    params.append("minPriceTTC", min);
-                    if (max) params.append("maxPriceTTC", max);
+                    params.append("minPrix_TTC", min);
+                    if (max) params.append("maxPrix_TTC", max);
                 }
 
                 if (params.toString()) {
@@ -33,8 +44,10 @@ function Produit() {
                 }
                 const data = await response.json();
                 setProducts(data);
+                setError(null); // Clear any previous errors
             } catch (error) {
                 console.error("Erreur lors de la récupération des produits :", error);
+                setError("Impossible de récupérer les produits. Veuillez réessayer plus tard.");
             }
         };
 
@@ -82,6 +95,8 @@ function Produit() {
                     <option value="20-100">Plus de 20€</option>
                 </select>
             </div>
+
+            {error && <p className="error-message">{error}</p>}
 
             <div className="product-list-container">
                 {/* Passer les produits récupérés à ProductList */}
