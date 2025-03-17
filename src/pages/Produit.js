@@ -3,18 +3,10 @@ import ProductList from "./ProductList";
 import '../styles/App.css';
 
 function Produit() {
-    // États pour les filtres et les produits
     const [category, setCategory] = useState('');
     const [priceRange, setPriceRange] = useState('');
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
-
-    // Association des noms de catégories avec leurs IDs
-    const categoryMap = {
-        "Café": 2,
-        "Thé": 1,
-        "Accessoire": 3
-    };
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -22,14 +14,14 @@ function Produit() {
                 let url = `https://api.louis.hameau.dev-campus.fr/api/produits/search`;
                 const params = new URLSearchParams();
 
-                // Filtrer par catégorie (ID)
-                if (category) params.append("categorie_id", categoryMap[category]);
+                if (category) {
+                    params.append("categorie_nom", category); // Use categorie_nom
+                }
 
-                // Filtrer par plage de prix
                 if (priceRange) {
                     const [min, max] = priceRange.split('-');
-                    params.append("minPrix_TTC", min);
-                    if (max) params.append("maxPrix_TTC", max);
+                    params.append("minPriceTTC", min);
+                    if (max) params.append("maxPriceTTC", max);
                 }
 
                 if (params.toString()) {
@@ -40,11 +32,11 @@ function Produit() {
 
                 const response = await fetch(url);
                 if (!response.ok) {
-                    throw new Error("Erreur lors de la récupération des produits");
+                    throw new Error(`Erreur HTTP! Statut: ${response.status}`);
                 }
                 const data = await response.json();
                 setProducts(data);
-                setError(null); // Clear any previous errors
+                setError(null);
             } catch (error) {
                 console.error("Erreur lors de la récupération des produits :", error);
                 setError("Impossible de récupérer les produits. Veuillez réessayer plus tard.");
@@ -65,7 +57,6 @@ function Produit() {
                 </p>
             </div>
 
-            {/* Zone de filtrage */}
             <div className="filter-container">
                 <label htmlFor="productFilter" className="filter-label">Filtrer par :</label>
                 <select
@@ -80,7 +71,6 @@ function Produit() {
                     <option value="Accessoire">Accessoire</option>
                 </select>
 
-                {/* Filtrer par prix */}
                 <label htmlFor="priceFilter" className="filter-label">Plage de prix :</label>
                 <select
                     id="priceFilter"
@@ -99,7 +89,6 @@ function Produit() {
             {error && <p className="error-message">{error}</p>}
 
             <div className="product-list-container">
-                {/* Passer les produits récupérés à ProductList */}
                 <ProductList products={products} />
             </div>
         </section>
