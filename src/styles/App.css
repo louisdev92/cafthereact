@@ -1374,16 +1374,17 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-    padding: 20px;
+    padding: 35px;
+    background-color: #f4f1e1;
+    border-radius: 8px;
+    text-align: center; /* Centre le texte */
 }
 
 /* Titre */
-h2 {
-    font-size: 1.5rem;
+.compte-container h2 {
+    font-size: 2rem;
+    color: #0b6e4f; /* Utilise la couleur de texte existante */
     margin-bottom: 20px;
-    color: #0b6e4f;
 }
 
 /* Section des informations utilisateur */
