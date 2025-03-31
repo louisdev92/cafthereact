@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { PanierContext } from "../context/PanierContext";
 import { api } from "../api";
 import { useNavigate } from "react-router-dom";
-import '../styles/App.css'; // Assurez-vous que ce fichier CSS est bien importé
+import '../styles/App.css';
 
 const PasserCommande = () => {
     const { panier, viderPanier } = useContext(PanierContext);

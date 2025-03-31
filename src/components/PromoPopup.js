@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import '../styles/PromoPopup.css'; // Assurez-vous d'avoir un fichier CSS pour le style
+import '../styles/PromoPopup.css';
 
 const PromoPopup = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -14,7 +14,7 @@ const PromoPopup = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsVisible(false);
-        }, 5000); // Changez ce temps en fonction de vos besoins
+        }, 5000);
         return () => clearTimeout(timer);
     }, []);
 

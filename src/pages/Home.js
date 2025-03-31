@@ -1,7 +1,7 @@
 import React from 'react';
-import TopVente from './TopVente'; // Importez votre liste de produits
+import TopVente from './TopVente';
 import '../App.js';
-import { Link } from "react-router-dom";  // Assurez-vous d'avoir un fichier de style global.
+import { Link } from "react-router-dom";
 import PromoPopup from '../components/PromoPopup';
 
 function Home() {

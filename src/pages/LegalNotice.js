@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/LegalNotice.css'; // Assurez-vous d'avoir un fichier CSS pour le style
+import '../styles/LegalNotice.css';
 
 const LegalNotice = () => {
     return (

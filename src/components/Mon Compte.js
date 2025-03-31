@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { api } from "../api";
-import '../styles/App.css'; // Importation du CSS
+import '../styles/App.css';
 import { useNavigate } from "react-router-dom";
 
 const MonCompte = () => {

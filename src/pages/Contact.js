@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/App.css';  // Assure-toi d'ajouter des styles appropriés dans ce fichier
+import '../styles/App.css';
 
 function Contact(props) {
     // État pour gérer le formulaire de contact
@@ -16,7 +16,6 @@ function Contact(props) {
         }
         setError('');
         console.log('Message envoyé : ', { name, email, message });
-        // Ajoute ici le code pour envoyer les informations (par exemple, via une API)
         alert('Votre message a été envoyé avec succès !');
         setName('');
         setEmail('');
