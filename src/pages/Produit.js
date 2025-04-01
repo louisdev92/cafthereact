@@ -39,7 +39,6 @@ function Produit() {
                 setError(null);
             } catch (error) {
                 console.error("Erreur lors de la récupération des produits :", error);
-                setError("Impossible de récupérer les produits. Veuillez réessayer plus tard.");
             }
         };
 
