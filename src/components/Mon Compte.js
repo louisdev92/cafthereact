@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { api } from "../api";
+import { AuthContext } from "../context/AuthContext";
 import '../styles/App.css';
 import { useNavigate } from "react-router-dom";
 
 const MonCompte = () => {
+    const { user } = useContext(AuthContext);
     const [client, setClient] = useState(null);
     const [formData, setFormData] = useState({});
     const navigate = useNavigate();
@@ -15,7 +17,7 @@ const MonCompte = () => {
             alert("Veuillez vous connecter!");
             window.location.href = "/login";
         } else {
-            api.get("/ficheclient/6")
+            api.get(`/ficheclient/${user.id}`)
                 .then(response => {
                     setClient(response.data);
                     setFormData(response.data);
@@ -76,10 +78,10 @@ const MonCompte = () => {
                         </button>
                     </div>
                 </div>
-                    )}
-                    <button onClick={handleLogout} className="compte-btn logout-btn">Se déconnecter</button>
+            )}
+            <button onClick={handleLogout} className="compte-btn logout-btn">Se déconnecter</button>
         </div>
-            );
-            };
+    );
+};
 
-            export default MonCompte;
+export default MonCompte;
